@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# TODO: Mettre à jour avec votre domaine final
+Sitemap: https://clcportfolio.vercel.app/sitemap.xml
