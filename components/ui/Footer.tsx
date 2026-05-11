@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 const footerLinks = [
   { href: '/home', label: 'Accueil' },
@@ -14,8 +15,13 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-10">
           {/* Brand */}
           <div>
-            {/* TODO: Remplacer par votre nom de marque complet si différent */}
-            <p className="font-serif text-xl tracking-[0.2em] text-charcoal mb-1">CLC</p>
+            <Image
+              src="/images/intro/BCLC.png"
+              alt="CLC"
+              width={48}
+              height={48}
+              className="mb-1"
+            />
             <p className="text-stone-400 text-xs font-light tracking-wide">
               Peinture sur vitrines · Créations artistiques
             </p>

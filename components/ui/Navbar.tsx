@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 
 const navLinks = [
@@ -34,19 +35,20 @@ export default function Navbar() {
           : 'bg-transparent'
       }`}
     >
-      <nav className="max-w-6xl mx-auto px-6 md:px-12 h-16 flex items-center justify-between">
+      <nav className="w-full h-16 flex items-center">
         {/* Logo */}
-        {/* TODO: Remplacer "CLC" par votre logo image si souhaité */}
-        <Link
-          href="/home"
-          className="font-serif text-lg tracking-[0.2em] text-charcoal hover:opacity-60 transition-opacity duration-300"
-          aria-label="CLC — Retour à l'accueil"
-        >
-          CLC
+        <Link href="/home" aria-label="CLC — Retour à l'accueil">
+          <Image
+            src="/images/intro/BCLC.png"
+            alt="CLC"
+            width={96}
+            height={96}
+            className="hover:opacity-60 transition-opacity duration-300"
+          />
         </Link>
 
         {/* Navigation desktop */}
-        <ul className="hidden md:flex items-center gap-10" role="list">
+        <ul className="hidden md:flex items-center gap-10 ml-auto pr-6 md:pr-12" role="list">
           {navLinks.map((link) => (
             <li key={link.href}>
               <Link
@@ -65,7 +67,7 @@ export default function Navbar() {
 
         {/* Hamburger mobile */}
         <button
-          className="md:hidden flex flex-col justify-center gap-[5px] w-8 h-8"
+          className="md:hidden flex flex-col justify-center gap-[5px] w-8 h-8 ml-auto"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label={menuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
           aria-expanded={menuOpen}

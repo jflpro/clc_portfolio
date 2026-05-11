@@ -10,29 +10,10 @@ export default function Hero() {
       className="relative min-h-screen flex items-center overflow-hidden bg-white"
       aria-label="Section principale"
     >
-      {/* Image de fond hero */}
-      {/*
-        TODO: Décommenter et remplacer par votre image hero
-        Dimensions recommandées : 1920×1080px minimum, format paysage
-        L'image doit refléter votre univers : surface vitrée, lumière, atelier...
-      */}
-      <div className="absolute inset-0 z-0 bg-stone-50">
-        {/*
-        <Image
-          src="/images/hero/hero-bg.jpg"
-          alt="TODO: Description de votre image hero (ex: Peinture sur vitrine, boutique Paris)"
-          fill
-          className="object-cover"
-          priority
-          quality={90}
-        />
-        <div className="absolute inset-0 bg-white/50" />
-        */}
-      </div>
-
       {/* Contenu */}
       <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-12 pt-28 pb-20 w-full">
-        <div className="max-w-2xl">
+        <div className="grid md:grid-cols-[1fr_2fr] gap-8 items-center">
+          <div className="max-w-xl">
           {/* Accroche */}
           <motion.p
             initial={{ opacity: 0, y: 12 }}
@@ -44,7 +25,6 @@ export default function Hero() {
           </motion.p>
 
           {/* Titre principal — H1 */}
-          {/* TODO: Remplacer par votre phrase forte (3–6 mots maximum) */}
           <motion.h1
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
@@ -58,7 +38,6 @@ export default function Hero() {
           </motion.h1>
 
           {/* Sous-titre */}
-          {/* TODO: Remplacer par votre proposition de valeur (2 phrases max) */}
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
@@ -90,7 +69,16 @@ export default function Hero() {
             </Link>
           </motion.div>
         </div>
+
+        <div className="w-full">
+          <img
+            src="/images/hero-bg.png"
+            alt="Création CLC"
+            style={{ width: '100%', height: 'auto', display: 'block' }}
+          />
+        </div>
       </div>
+    </div>
 
       {/* Indicateur de défilement */}
       <motion.div

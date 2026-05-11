@@ -24,24 +24,13 @@ export default function FeaturedImages() {
             transition={{ duration: 1.3, ease: [0.25, 0.1, 0.25, 1] }}
             className="relative aspect-[4/5] bg-stone-100 overflow-hidden group"
           >
-            {/*
-              TODO: Remplacer par votre image 1 (œuvre phare, vitrine...)
-              Dimensions recommandées : 800×1000px minimum
-            */}
-            <div className="absolute inset-0 flex items-end p-6">
-              <p className="text-stone-300 text-xs tracking-widest uppercase">
-                Image featured 1
-              </p>
-            </div>
-            {/*
             <Image
               src="/images/featured/featured-1.jpg"
-              alt="TODO: Description de l'œuvre (ex: Vitrine florale, boutique de mode Paris)"
+              alt="Création artistique CLC"
               fill
               className="object-cover group-hover:scale-[1.03] transition-transform duration-700 ease-gallery"
             />
             <div className="absolute inset-0 bg-charcoal/0 group-hover:bg-charcoal/5 transition-colors duration-500" />
-            */}
           </motion.div>
 
           {/* Image 2 */}
@@ -51,24 +40,13 @@ export default function FeaturedImages() {
             transition={{ duration: 1.3, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
             className="relative aspect-[4/5] bg-stone-100 overflow-hidden group md:mt-16"
           >
-            {/*
-              TODO: Remplacer par votre image 2 (deuxième œuvre phare)
-              Dimensions recommandées : 800×1000px minimum
-            */}
-            <div className="absolute inset-0 flex items-end p-6">
-              <p className="text-stone-300 text-xs tracking-widest uppercase">
-                Image featured 2
-              </p>
-            </div>
-            {/*
             <Image
               src="/images/featured/featured-2.jpg"
-              alt="TODO: Description de l'œuvre"
+              alt="Création artistique CLC"
               fill
               className="object-cover group-hover:scale-[1.03] transition-transform duration-700 ease-gallery"
             />
             <div className="absolute inset-0 bg-charcoal/0 group-hover:bg-charcoal/5 transition-colors duration-500" />
-            */}
           </motion.div>
         </div>
 

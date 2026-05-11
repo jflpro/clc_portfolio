@@ -66,11 +66,6 @@ export default function Lightbox({
         >
           {/* Image */}
           <div className="relative aspect-[4/3] bg-stone-900">
-            {/* Placeholder — supprimer quand les images sont disponibles */}
-            <div className="absolute inset-0 flex items-center justify-center text-stone-600 text-sm tracking-widest">
-              {item.title}
-            </div>
-            {/*
             <Image
               src={item.src}
               alt={item.alt}
@@ -78,7 +73,6 @@ export default function Lightbox({
               className="object-contain"
               sizes="(max-width: 768px) 100vw, 80vw"
             />
-            */}
           </div>
 
           {/* Caption */}

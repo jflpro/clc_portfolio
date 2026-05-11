@@ -1,36 +1,54 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 
-// TODO: Remplacer les lettres texte par vos 3 images
-// Chaque image doit contenir une lettre (C, L, C)
-// Dimensions recommandées : 400×400px, fond blanc ou transparent
+const refH = 78
+
 const letters = [
   {
     id: 'c1',
-    imageSrc: '/images/intro/letter-c1.jpg',
-    fallback: 'C',
+    imageSrc: '/images/intro/c1.png',
+    alt: 'C',
     delay: 0,
+    w: Math.round(113 * refH / 151),
+    h: refH,
   },
   {
     id: 'l',
-    imageSrc: '/images/intro/letter-l.jpg',
-    fallback: 'L',
+    imageSrc: '/images/intro/l.png',
+    alt: 'L',
     delay: 0.9,
+    w: Math.round(149 * refH / 156),
+    h: refH,
   },
   {
     id: 'c2',
-    imageSrc: '/images/intro/letter-c2.jpg',
-    fallback: 'C',
+    imageSrc: '/images/intro/c2.png',
+    alt: 'C',
     delay: 1.8,
+    w: Math.round(112 * refH / 151),
+    h: refH,
   },
 ]
 
 export default function IntroAnimation() {
   const router = useRouter()
+  const lRef = useRef<HTMLDivElement>(null)
+  const outerRef = useRef<HTMLDivElement>(null)
+  const [circleOffset, setCircleOffset] = useState(0)
+
+  useEffect(() => {
+    if (lRef.current && outerRef.current) {
+      const lRect = lRef.current.getBoundingClientRect()
+      const outerRect = outerRef.current.getBoundingClientRect()
+      const lCenter = lRect.left + lRect.width / 2
+      const outerCenter = outerRect.left + outerRect.width / 2
+      setCircleOffset(lCenter - outerCenter)
+    }
+  }, [])
 
   useEffect(() => {
     // L'intro ne se rejoue pas dans la même session
@@ -49,11 +67,12 @@ export default function IntroAnimation() {
   }, [router])
 
   return (
-    <div className="fixed inset-0 bg-white flex items-center justify-center">
-      <div className="flex items-center gap-6 md:gap-14">
+    <div ref={outerRef} className="fixed inset-0 bg-white flex flex-col items-center justify-center">
+      <div className="flex items-center gap-[10px]">
         {letters.map((letter) => (
           <motion.div
             key={letter.id}
+            ref={letter.id === 'l' ? lRef : undefined}
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
@@ -61,30 +80,35 @@ export default function IntroAnimation() {
               duration: 1.4,
               ease: [0.25, 0.1, 0.25, 1],
             }}
-            className="relative w-20 h-20 md:w-36 md:h-36"
+            style={letter.id === 'c1' ? { marginRight: -19 } : undefined}
           >
-            {/*
-              Une fois vos images disponibles dans /public/images/intro/,
-              remplacez le <span> ci-dessous par le bloc <Image> commenté.
-            */}
-            <span className="absolute inset-0 flex items-center justify-center font-serif text-6xl md:text-8xl text-charcoal tracking-widest select-none">
-              {letter.fallback}
-            </span>
-
-            {/* Décommenter quand vos images sont prêtes :
             <Image
               src={letter.imageSrc}
-              alt={letter.fallback}
-              fill
-              className="object-contain"
+              alt={letter.alt}
+              width={letter.w}
+              height={letter.h}
               priority
             />
-            */}
           </motion.div>
         ))}
       </div>
 
-      {/* Indication de chargement discrète */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 2.6, duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
+        className="mt-8"
+        style={{ transform: `translateX(${circleOffset}px)` }}
+      >
+        <Image
+          src="/images/intro/circle.png"
+          alt="Cercle"
+          width={100}
+          height={100}
+          priority
+        />
+      </motion.div>
+
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
