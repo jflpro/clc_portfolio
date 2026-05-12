@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 
 export default function AboutContent() {
   const videoRef = useRef<HTMLVideoElement>(null)
-  const [isMuted, setIsMuted] = useState(false)
+  const [isMuted, setIsMuted] = useState(true)
 
   const toggleMute = () => {
     if (videoRef.current) {
@@ -61,6 +61,7 @@ export default function AboutContent() {
               src="/videos/cut-vidsound.mp4"
               autoPlay
               loop
+              muted
               playsInline
             />
             <button
