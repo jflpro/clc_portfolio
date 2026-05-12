@@ -1,31 +1,11 @@
 'use client'
 
-import { useRef, useState, useEffect } from 'react'
+import { useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 
 export default function AboutContent() {
   const videoRef = useRef<HTMLVideoElement>(null)
-  const [isMuted, setIsMuted] = useState(false)
-  const [needsPlay, setNeedsPlay] = useState(false)
-
-  useEffect(() => {
-    const video = videoRef.current
-    if (!video) return
-    video.muted = false
-    const promise = video.play()
-    if (promise !== undefined) {
-      promise.catch(() => setNeedsPlay(true))
-    }
-  }, [])
-
-  const handlePlay = () => {
-    const video = videoRef.current
-    if (!video) return
-    video.muted = false
-    setIsMuted(false)
-    video.play()
-    setNeedsPlay(false)
-  }
+  const [isMuted, setIsMuted] = useState(true)
 
   const toggleMute = () => {
     if (videoRef.current) {
@@ -79,19 +59,11 @@ export default function AboutContent() {
               ref={videoRef}
               className="w-full rounded-lg shadow-lg"
               src="/videos/cut-vidsound.mp4"
+              autoPlay
               loop
+              muted
               playsInline
-              muted={false}
             />
-            {needsPlay && (
-              <button
-                onClick={handlePlay}
-                className="absolute inset-0 flex items-center justify-center bg-black/30 backdrop-blur-sm rounded-lg transition-all duration-300 hover:bg-black/40"
-                aria-label="Lire la vidéo avec le son"
-              >
-                <span className="text-white/90 text-5xl">▶</span>
-              </button>
-            )}
             <button
               onClick={toggleMute}
               className="absolute bottom-4 right-4 bg-black/40 backdrop-blur-sm text-white text-xs px-3 py-1.5 rounded-full hover:bg-black/50 transition-all duration-300 shadow-lg"
