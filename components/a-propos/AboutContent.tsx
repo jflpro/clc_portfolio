@@ -1,11 +1,21 @@
 'use client'
 
-import { useRef, useState } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 
 export default function AboutContent() {
   const videoRef = useRef<HTMLVideoElement>(null)
-  const [isMuted, setIsMuted] = useState(true)
+  const [isMuted, setIsMuted] = useState(false)
+
+  useEffect(() => {
+    const video = videoRef.current
+    if (!video) return
+    video.play().catch(() => {
+      video.muted = true
+      setIsMuted(true)
+      video.play()
+    })
+  }, [])
 
   const toggleMute = () => {
     if (videoRef.current) {
@@ -61,7 +71,6 @@ export default function AboutContent() {
               src="/videos/cut-vidsound.mp4"
               autoPlay
               loop
-              muted
               playsInline
             />
             <button
