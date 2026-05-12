@@ -60,8 +60,24 @@ export default function ContactContent() {
   }
 
   return (
-    <div className="min-h-screen bg-white">
-      <section className="pt-40 pb-32 px-6 md:px-12 max-w-6xl mx-auto">
+    <div className="min-h-screen bg-white relative">
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage: 'url(/images/fleurs.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          opacity: 0.5,
+        }}
+      />
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: 'linear-gradient(to bottom, white 0%, white 70%, transparent 95%)',
+        }}
+      />
+      <section className="relative pt-40 pb-32 px-6 md:px-12 max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-20 md:gap-32 items-start">
           {/* Colonne gauche — intro + coordonnées */}
           <motion.div
