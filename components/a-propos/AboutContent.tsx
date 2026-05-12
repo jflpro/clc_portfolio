@@ -1,33 +1,24 @@
 'use client'
 
-import { useRef, useState, useEffect } from 'react'
+import { useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 
 export default function AboutContent() {
   const videoRef = useRef<HTMLVideoElement>(null)
   const [muted, setMuted] = useState(true)
 
-  useEffect(() => {
+  const handlePlaying = () => {
     const v = videoRef.current
     if (!v) return
-    v.muted = true
-    v.play().then(() => {
-      v.muted = false
-      setMuted(false)
-    }).catch(() => {})
-  }, [])
+    v.muted = false
+    setMuted(false)
+  }
 
-  const handleClick = () => {
+  const toggleMute = () => {
     const v = videoRef.current
     if (!v) return
-    if (v.paused) {
-      v.muted = false
-      setMuted(false)
-      v.play()
-    } else {
-      v.muted = !v.muted
-      setMuted(v.muted)
-    }
+    v.muted = !v.muted
+    setMuted(v.muted)
   }
 
   return (
@@ -77,10 +68,12 @@ export default function AboutContent() {
               src="/videos/cut-vidsound.mp4"
               autoPlay
               loop
+              muted
               playsInline
+              onPlaying={handlePlaying}
             />
             <button
-              onClick={handleClick}
+              onClick={toggleMute}
               className="absolute bottom-4 right-4 bg-black/40 backdrop-blur-sm text-white text-xs px-3 py-1.5 rounded-full hover:bg-black/50 transition-all duration-300 shadow-lg"
             >
               {muted ? '🔊' : '🔇'}
