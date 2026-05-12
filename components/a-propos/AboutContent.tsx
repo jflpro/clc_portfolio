@@ -1,11 +1,23 @@
 'use client'
 
-import { useRef, useState } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 
 export default function AboutContent() {
   const videoRef = useRef<HTMLVideoElement>(null)
-  const [isMuted, setIsMuted] = useState(true)
+  const [isMuted, setIsMuted] = useState(false)
+
+  useEffect(() => {
+    const video = videoRef.current
+    if (!video) return
+    video.muted = true
+    video.play().then(() => {
+      video.muted = false
+      setIsMuted(false)
+    }).catch(() => {
+      setIsMuted(true)
+    })
+  }, [])
 
   const toggleMute = () => {
     if (videoRef.current) {
@@ -69,7 +81,7 @@ export default function AboutContent() {
               className="absolute bottom-4 right-4 bg-black/40 backdrop-blur-sm text-white text-xs px-3 py-1.5 rounded-full hover:bg-black/50 transition-all duration-300 shadow-lg"
               aria-label={isMuted ? 'Activer le son' : 'Couper le son'}
             >
-              {isMuted ? '🔇' : '🔊'}
+              {isMuted ? '🔊' : '🔇'}
             </button>
           </div>
         </motion.div>
