@@ -5,24 +5,28 @@ import { motion } from 'framer-motion'
 
 export default function AboutContent() {
   const videoRef = useRef<HTMLVideoElement>(null)
-  const [isMuted, setIsMuted] = useState(false)
+  const [muted, setMuted] = useState(true)
 
   useEffect(() => {
-    const video = videoRef.current
-    if (!video) return
-    video.muted = true
-    video.play().then(() => {
-      video.muted = false
-      setIsMuted(false)
-    }).catch(() => {
-      setIsMuted(true)
-    })
+    const v = videoRef.current
+    if (!v) return
+    v.muted = true
+    v.play().then(() => {
+      v.muted = false
+      setMuted(false)
+    }).catch(() => {})
   }, [])
 
-  const toggleMute = () => {
-    if (videoRef.current) {
-      videoRef.current.muted = !videoRef.current.muted
-      setIsMuted(videoRef.current.muted)
+  const handleClick = () => {
+    const v = videoRef.current
+    if (!v) return
+    if (v.paused) {
+      v.muted = false
+      setMuted(false)
+      v.play()
+    } else {
+      v.muted = !v.muted
+      setMuted(v.muted)
     }
   }
 
@@ -73,15 +77,13 @@ export default function AboutContent() {
               src="/videos/cut-vidsound.mp4"
               autoPlay
               loop
-              muted
               playsInline
             />
             <button
-              onClick={toggleMute}
+              onClick={handleClick}
               className="absolute bottom-4 right-4 bg-black/40 backdrop-blur-sm text-white text-xs px-3 py-1.5 rounded-full hover:bg-black/50 transition-all duration-300 shadow-lg"
-              aria-label={isMuted ? 'Activer le son' : 'Couper le son'}
             >
-              {isMuted ? '🔊' : '🔇'}
+              {muted ? '🔊' : '🔇'}
             </button>
           </div>
         </motion.div>
