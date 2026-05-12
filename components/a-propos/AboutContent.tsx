@@ -58,14 +58,14 @@ export default function AboutContent() {
             <video
               ref={videoRef}
               className="w-full rounded-lg shadow-lg"
-              src="/videos/cut vidsound.mp4"
+              src="/videos/cut-vidsound.mp4"
               autoPlay
               loop
               playsInline
             />
             <button
               onClick={toggleMute}
-              className="absolute bottom-4 right-4 bg-white/20 backdrop-blur-sm text-white/80 text-xs px-3 py-1.5 rounded-full hover:bg-white/30 transition-all duration-300"
+              className="absolute bottom-4 right-4 bg-black/40 backdrop-blur-sm text-white text-xs px-3 py-1.5 rounded-full hover:bg-black/50 transition-all duration-300 shadow-lg"
               aria-label={isMuted ? 'Activer le son' : 'Couper le son'}
             >
               {isMuted ? '🔇' : '🔊'}
