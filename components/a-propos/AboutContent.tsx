@@ -1,8 +1,19 @@
 'use client'
 
+import { useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 
 export default function AboutContent() {
+  const videoRef = useRef<HTMLVideoElement>(null)
+  const [isMuted, setIsMuted] = useState(false)
+
+  const toggleMute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !videoRef.current.muted
+      setIsMuted(videoRef.current.muted)
+    }
+  }
+
   return (
     <div className="min-h-screen bg-white">
       <section className="pt-40 pb-32 px-6 md:px-12 max-w-4xl mx-auto">
@@ -41,6 +52,24 @@ export default function AboutContent() {
               de raconter une histoire à travers les couleurs, les formes et les
               textures.
             </p>
+          </div>
+
+          <div className="relative mt-16 mx-auto max-w-2xl w-full">
+            <video
+              ref={videoRef}
+              className="w-full rounded-lg shadow-lg"
+              src="/videos/cut vidsound.mp4"
+              autoPlay
+              loop
+              playsInline
+            />
+            <button
+              onClick={toggleMute}
+              className="absolute bottom-4 right-4 bg-white/20 backdrop-blur-sm text-white/80 text-xs px-3 py-1.5 rounded-full hover:bg-white/30 transition-all duration-300"
+              aria-label={isMuted ? 'Activer le son' : 'Couper le son'}
+            >
+              {isMuted ? '🔇' : '🔊'}
+            </button>
           </div>
         </motion.div>
       </section>

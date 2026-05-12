@@ -112,6 +112,23 @@ export default function IntroAnimation() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
+        transition={{ delay: 2.6, duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
+        className="mt-4 z-10"
+        style={{ transform: `translateX(${circleOffset}px)` }}
+      >
+        <Image
+          src="/images/intro/ihjihj.png"
+          alt=""
+          width={200}
+          height={200}
+          priority
+          className="object-contain"
+        />
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
         transition={{ delay: 3.5, duration: 0.8 }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2"
       >
