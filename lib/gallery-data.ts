@@ -402,28 +402,6 @@ export const galleryItems: GalleryItem[] = [
   },
 
   {
-    id: 'v58',
-    category: 'vitrines',
-    src: '/images/gallery/vitrines/v58.png',
-    alt: 'Vitrine commerciale 58',
-    title: 'Vitrine 58',
-  },
-  {
-    id: 'v59',
-    category: 'vitrines',
-    src: '/images/gallery/vitrines/v59.png',
-    alt: 'Vitrine commerciale 59',
-    title: 'Vitrine 59',
-  },
-  {
-    id: 'v60',
-    category: 'vitrines',
-    src: '/images/gallery/vitrines/v60.png',
-    alt: 'Vitrine commerciale 60',
-    title: 'Vitrine 60',
-  },
-
-  {
     id: 'v61',
     category: 'vitrines',
     src: '/images/gallery/vitrines/v61.png',
