@@ -38,7 +38,7 @@ export default function AnimalContent() {
         </motion.div>
       </section>
 
-      {/* Image 1 — grande, immersive */}
+      {/* Vidéo 1 — grande, immersive */}
       <section className="max-w-6xl mx-auto px-6 md:px-12 mb-28">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
@@ -46,24 +46,14 @@ export default function AnimalContent() {
           transition={{ duration: 1.3, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
           className="relative aspect-[16/7] bg-stone-100 overflow-hidden"
         >
-          {/*
-            TODO: Remplacer par votre image principale communication animale
-            Dimensions recommandées : 1600×700px minimum, atmosphère douce
-          */}
-          <div className="absolute inset-0 flex items-center justify-center">
-            <p className="text-stone-300 text-xs tracking-widest uppercase">
-              Image communication animale 1 — grand format
-            </p>
-          </div>
-          {/*
-          <Image
-            src="/images/animale/animale-1.jpg"
-            alt="TODO: Description (ex: Portrait d'un cheval, douceur et connexion)"
-            fill
-            className="object-cover"
-            priority
+          <video
+            className="absolute inset-0 w-full h-full object-cover"
+            src="/videos/animale/animale-hero.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
           />
-          */}
         </motion.div>
       </section>
 
