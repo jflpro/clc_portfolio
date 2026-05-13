@@ -2,7 +2,6 @@
 
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import Image from 'next/image'
 import Link from 'next/link'
 
 export default function AnimalContent() {
@@ -115,7 +114,7 @@ export default function AnimalContent() {
         </div>
       </section>
 
-      {/* Image 2 — format portrait, intimiste */}
+      {/* Vidéo 2 — format portrait, intimiste */}
       <section
         ref={quoteRef}
         className="max-w-2xl mx-auto px-6 md:px-12 mb-40"
@@ -126,23 +125,14 @@ export default function AnimalContent() {
           transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
           className="relative aspect-square bg-stone-100 overflow-hidden"
         >
-          {/*
-            TODO: Remplacer par votre image 2 (optionnelle)
-            Dimensions recommandées : 800×800px, format carré ou portrait
-          */}
-          <div className="absolute inset-0 flex items-center justify-center">
-            <p className="text-stone-300 text-xs tracking-widest uppercase">
-              Image communication animale 2 (optionnelle)
-            </p>
-          </div>
-          {/*
-          <Image
-            src="/images/animale/animale-2.jpg"
-            alt="TODO: Description de l'image"
-            fill
-            className="object-cover"
+          <video
+            className="absolute inset-0 w-full h-full object-cover"
+            src="/videos/animale/animale-2.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
           />
-          */}
         </motion.div>
       </section>
 
