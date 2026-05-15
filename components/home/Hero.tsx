@@ -10,10 +10,6 @@ export default function Hero() {
       className="relative min-h-screen flex items-center overflow-hidden bg-white"
       aria-label="Section principale"
     >
-      <div
-        className="absolute inset-0 bg-center"
-        style={{ backgroundImage: "url('/images/services-bg.png')", opacity: 0.2, backgroundSize: '50%' }}
-      />
       {/* Contenu */}
       <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-12 pt-28 pb-20 w-full">
         <div className="grid md:grid-cols-[1fr_2fr] gap-8 items-center">
