@@ -45,6 +45,7 @@ export default function Navbar() {
             alt="CLC"
             width={96}
             height={96}
+            priority
             className="hover:opacity-60 transition-opacity duration-300"
           />
         </Link>
