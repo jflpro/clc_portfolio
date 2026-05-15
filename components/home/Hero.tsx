@@ -44,8 +44,8 @@ export default function Hero() {
             transition={{ duration: 1.2, delay: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
             className="text-base md:text-lg text-stone-500 max-w-md leading-relaxed mb-12 font-light"
           >
-            Je peins directement sur vos vitrines et surfaces vitrées. Chaque
-            création est unique, pensée pour votre espace et votre identité.
+            Je réalise sur vos vitrines et surfaces vitrées des peintures vibrantes.
+            Chaque création est unique, pensée pour votre espace et votre énergie.
           </motion.p>
 
           {/* CTAs */}
