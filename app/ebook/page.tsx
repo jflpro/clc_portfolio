@@ -16,7 +16,6 @@ export default function EbookPage() {
           className="absolute inset-0 w-full h-full object-cover"
           src="/videos/ebook-bg.mp4"
           autoPlay
-          muted
           loop
           playsInline
         />
