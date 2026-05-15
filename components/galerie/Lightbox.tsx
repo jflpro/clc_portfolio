@@ -49,7 +49,7 @@ export default function Lightbox({
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.3 }}
-        className="absolute inset-0 bg-black/88"
+        className="absolute inset-0 bg-white/95"
         onClick={onClose}
       />
 
@@ -65,7 +65,7 @@ export default function Lightbox({
           onClick={(e) => e.stopPropagation()}
         >
           {/* Image */}
-          <div className="relative aspect-[4/3] bg-stone-900">
+          <div className="relative aspect-[4/3] bg-stone-100">
             <Image
               src={item.src}
               alt={item.alt}
@@ -78,14 +78,14 @@ export default function Lightbox({
           {/* Caption */}
           {item.title && (
             <div className="mt-4 text-center">
-              <p className="text-stone-400 text-xs tracking-widest uppercase">
+              <p className="text-stone-600 text-xs tracking-widest uppercase">
                 {item.title}
               </p>
             </div>
           )}
 
           {/* Compteur */}
-          <p className="mt-2 text-center text-stone-600 text-xs">
+          <p className="mt-2 text-center text-stone-500 text-xs">
             {currentIndex + 1} / {items.length}
           </p>
         </motion.div>
@@ -94,7 +94,7 @@ export default function Lightbox({
       {/* Fermer */}
       <button
         onClick={onClose}
-        className="absolute top-5 right-5 z-20 text-stone-400 hover:text-white transition-colors duration-200 text-sm tracking-widest p-2"
+         className="absolute top-5 right-5 z-20 text-stone-500 hover:text-charcoal transition-colors duration-200 text-sm tracking-widest p-2"
         aria-label="Fermer"
       >
         ✕
@@ -107,7 +107,7 @@ export default function Lightbox({
             e.stopPropagation()
             onNavigate(currentIndex - 1)
           }}
-          className="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 z-20 text-stone-400 hover:text-white transition-colors duration-200 p-3 text-xl"
+          className="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 z-20 text-stone-500 hover:text-charcoal transition-colors duration-200 p-3 text-xl"
           aria-label="Image précédente"
         >
           ←
@@ -121,7 +121,7 @@ export default function Lightbox({
             e.stopPropagation()
             onNavigate(currentIndex + 1)
           }}
-          className="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 z-20 text-stone-400 hover:text-white transition-colors duration-200 p-3 text-xl"
+          className="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 z-20 text-stone-500 hover:text-charcoal transition-colors duration-200 p-3 text-xl"
           aria-label="Image suivante"
         >
           →
