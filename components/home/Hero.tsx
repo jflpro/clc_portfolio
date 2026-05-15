@@ -80,23 +80,7 @@ export default function Hero() {
       </div>
     </div>
 
-      {/* Indicateur de défilement */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 2.2, duration: 1 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3"
-        aria-hidden="true"
-      >
-        <span className="text-[10px] tracking-[0.3em] uppercase text-stone-300">
-          Défiler
-        </span>
-        <motion.div
-          animate={{ y: [0, 7, 0] }}
-          transition={{ repeat: Infinity, duration: 1.6, ease: 'easeInOut' }}
-          className="w-px h-8 bg-stone-200"
-        />
-      </motion.div>
+
     </section>
   )
 }
