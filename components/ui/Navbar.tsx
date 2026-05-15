@@ -43,8 +43,8 @@ export default function Navbar() {
           <Image
             src="/images/intro/BCLC.png"
             alt="CLC"
-            width={96}
-            height={96}
+            width={64}
+            height={64}
             priority
             className="hover:opacity-60 transition-opacity duration-300"
           />
