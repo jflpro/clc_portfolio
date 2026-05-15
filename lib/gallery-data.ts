@@ -1,4 +1,4 @@
-export type GalleryCategory = 'vitrines' | 'oeuvres' | 'animale' | 'autres'
+export type GalleryCategory = 'vitrines' | 'oeuvres' | 'animale' | 'autres' | 'edition-limitee'
 
 export interface GalleryItem {
   id: string
@@ -1318,4 +1318,5 @@ export const galleryCategories = [
   { key: 'oeuvres' as GalleryCategory, label: 'Œuvres personnelles' },
   { key: 'animale' as GalleryCategory, label: 'Communication animale' },
   { key: 'autres' as GalleryCategory, label: 'Autres créations' },
+  { key: 'edition-limitee' as GalleryCategory, label: 'Édition limitée' },
 ]
