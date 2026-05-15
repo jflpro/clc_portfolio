@@ -17,7 +17,6 @@ export default function EbookPage() {
           src="/videos/ebook-bg.mp4"
           autoPlay
           loop
-          muted
           playsInline
         />
         <div className="relative z-10 flex items-center justify-center min-h-[100dvh]">
