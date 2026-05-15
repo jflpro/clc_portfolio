@@ -11,8 +11,18 @@ export default function EbookPage() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-white flex items-center justify-center">
-        <p className="font-serif text-4xl md:text-5xl text-stone-300">Coming soon</p>
+      <main className="relative min-h-screen bg-black overflow-hidden">
+        <video
+          className="absolute inset-0 w-full h-full object-cover"
+          src="/videos/ebook-bg.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+        />
+        <div className="relative z-10 flex items-center justify-center min-h-screen">
+          <p className="font-serif text-4xl md:text-5xl text-white/80">Coming soon</p>
+        </div>
       </main>
       <Footer />
     </>
