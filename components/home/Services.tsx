@@ -37,7 +37,7 @@ export default function Services() {
       aria-labelledby="services-heading"
     >
       <div
-        className="absolute inset-0 bg-center"
+        className="absolute inset-0 bg-right bg-no-repeat"
         style={{ backgroundImage: "url('/images/services-bg.png')", opacity: 0.2, backgroundSize: '50%' }}
       />
       <div className="max-w-6xl mx-auto px-6 md:px-12 relative z-10">
