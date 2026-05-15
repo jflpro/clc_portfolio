@@ -106,7 +106,7 @@ export default function Lightbox({
       {/* Fermer */}
       <button
         onClick={onClose}
-         className="absolute top-5 right-5 z-20 text-stone-500 hover:text-charcoal transition-colors duration-200 text-sm tracking-widest p-2"
+         className="absolute top-5 right-5 z-20 text-stone-500 hover:text-charcoal transition-colors duration-200 text-sm tracking-widest p-4"
         aria-label="Fermer"
       >
         ✕
@@ -119,7 +119,7 @@ export default function Lightbox({
             e.stopPropagation()
             onNavigate(currentIndex - 1)
           }}
-          className="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 z-20 text-stone-500 hover:text-charcoal transition-colors duration-200 p-3 text-xl"
+          className="absolute left-4 md:left-6 top-1/2 -translate-y-1/2 z-20 text-stone-500 hover:text-charcoal transition-colors duration-200 p-4 text-xl"
           aria-label="Image précédente"
         >
           ←
@@ -133,7 +133,7 @@ export default function Lightbox({
             e.stopPropagation()
             onNavigate(currentIndex + 1)
           }}
-          className="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 z-20 text-stone-500 hover:text-charcoal transition-colors duration-200 p-3 text-xl"
+          className="absolute right-4 md:right-6 top-1/2 -translate-y-1/2 z-20 text-stone-500 hover:text-charcoal transition-colors duration-200 p-4 text-xl"
           aria-label="Image suivante"
         >
           →

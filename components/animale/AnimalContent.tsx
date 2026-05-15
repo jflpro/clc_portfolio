@@ -13,7 +13,7 @@ export default function AnimalContent() {
   return (
     <div className="bg-white">
       {/* En-tête */}
-      <section className="pt-40 pb-16 px-6 md:px-12 max-w-6xl mx-auto">
+      <section className="pt-28 md:pt-40 pb-16 px-6 md:px-12 max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
@@ -52,6 +52,7 @@ export default function AnimalContent() {
             muted
             loop
             playsInline
+            preload="none"
           />
         </motion.div>
       </section>
@@ -132,6 +133,7 @@ export default function AnimalContent() {
             muted
             loop
             playsInline
+            preload="none"
           />
         </motion.div>
       </section>

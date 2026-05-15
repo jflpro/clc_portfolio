@@ -29,6 +29,7 @@ export default function FeaturedImages() {
               alt="Création artistique CLC"
               fill
               className="object-cover group-hover:scale-[1.03] transition-transform duration-700 ease-gallery"
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
             <div className="absolute inset-0 bg-charcoal/0 group-hover:bg-charcoal/5 transition-colors duration-500" />
           </motion.div>
@@ -45,6 +46,7 @@ export default function FeaturedImages() {
               alt="Création artistique CLC"
               fill
               className="object-cover group-hover:scale-[1.03] transition-transform duration-700 ease-gallery"
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
             <div className="absolute inset-0 bg-charcoal/0 group-hover:bg-charcoal/5 transition-colors duration-500" />
           </motion.div>

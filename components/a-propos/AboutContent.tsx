@@ -30,8 +30,8 @@ export default function AboutContent() {
   }
 
   return (
-    <div className="min-h-screen bg-white">
-      <section className="pt-40 pb-32 px-6 md:px-12 max-w-4xl mx-auto">
+    <div className="min-h-[100dvh] bg-white">
+      <section className="pt-28 md:pt-40 pb-32 px-6 md:px-12 max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -77,6 +77,7 @@ export default function AboutContent() {
               autoPlay
               loop
               playsInline
+              preload="none"
               onCanPlay={handleCanPlay}
             />
             <button

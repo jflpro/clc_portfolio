@@ -7,7 +7,7 @@ import Image from 'next/image'
 export default function Hero() {
   return (
     <section
-      className="relative min-h-screen flex items-center overflow-hidden bg-white"
+      className="relative min-h-[100dvh] flex items-center overflow-hidden bg-white"
       aria-label="Section principale"
     >
       {/* Contenu */}
@@ -71,10 +71,13 @@ export default function Hero() {
         </div>
 
         <div className="w-full">
-          <img
+          <Image
             src="/images/hero-bg.png"
             alt="Création CLC"
-            style={{ width: '100%', height: 'auto', display: 'block' }}
+            width={720}
+            height={555}
+            className="w-full h-auto"
+            sizes="(max-width: 768px) 100vw, 50vw"
           />
         </div>
       </div>

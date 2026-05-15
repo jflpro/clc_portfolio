@@ -60,7 +60,7 @@ export default function ContactContent() {
   }
 
   return (
-    <div className="min-h-screen bg-white relative">
+    <div className="min-h-[100dvh] bg-white relative">
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -77,7 +77,7 @@ export default function ContactContent() {
           background: 'linear-gradient(to bottom, white 0%, white 70%, transparent 95%)',
         }}
       />
-      <section className="relative pt-40 pb-32 px-6 md:px-12 max-w-6xl mx-auto">
+      <section className="relative pt-28 md:pt-40 pb-32 px-6 md:px-12 max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-20 md:gap-32 items-start">
           {/* Colonne gauche — intro + coordonnées */}
           <motion.div
@@ -196,7 +196,7 @@ export default function ContactContent() {
                     value={form.name}
                     onChange={handleChange}
                     placeholder="Votre nom"
-                    className="w-full border-b border-stone-200 py-3 text-sm text-charcoal placeholder:text-stone-300 focus:outline-none focus:border-charcoal transition-colors duration-300 bg-transparent"
+                    className="w-full border-b border-stone-200 py-3 text-base text-charcoal placeholder:text-stone-300 focus:outline-none focus:border-charcoal transition-colors duration-300 bg-transparent"
                   />
                 </div>
 
@@ -217,7 +217,7 @@ export default function ContactContent() {
                     value={form.email}
                     onChange={handleChange}
                     placeholder="votre@email.com"
-                    className="w-full border-b border-stone-200 py-3 text-sm text-charcoal placeholder:text-stone-300 focus:outline-none focus:border-charcoal transition-colors duration-300 bg-transparent"
+                    className="w-full border-b border-stone-200 py-3 text-base text-charcoal placeholder:text-stone-300 focus:outline-none focus:border-charcoal transition-colors duration-300 bg-transparent"
                   />
                 </div>
 
@@ -236,7 +236,7 @@ export default function ContactContent() {
                     value={form.subject}
                     onChange={handleChange}
                     placeholder="Objet de votre demande"
-                    className="w-full border-b border-stone-200 py-3 text-sm text-charcoal placeholder:text-stone-300 focus:outline-none focus:border-charcoal transition-colors duration-300 bg-transparent"
+                    className="w-full border-b border-stone-200 py-3 text-base text-charcoal placeholder:text-stone-300 focus:outline-none focus:border-charcoal transition-colors duration-300 bg-transparent"
                   />
                 </div>
 

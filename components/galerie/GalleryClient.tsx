@@ -18,9 +18,9 @@ export default function GalleryClient() {
       : galleryItems.filter((item) => item.category === activeFilter)
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-[100dvh] bg-white">
       {/* En-tête */}
-      <section className="pt-40 pb-12 px-6 md:px-12 max-w-6xl mx-auto">
+      <section className="pt-28 md:pt-40 pb-12 px-6 md:px-12 max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -43,7 +43,7 @@ export default function GalleryClient() {
               <li key={cat.key}>
                 <button
                   onClick={() => setActiveFilter(cat.key as FilterKey)}
-                  className={`text-xs tracking-wider uppercase transition-all duration-300 pb-1 ${
+                  className={`text-xs tracking-wider uppercase transition-all duration-300 py-2 ${
                     activeFilter === cat.key
                       ? 'text-charcoal border-b border-charcoal'
                       : 'text-stone-400 hover:text-stone-600'
@@ -60,7 +60,7 @@ export default function GalleryClient() {
 
       {/* Grille */}
       <section
-        className="px-6 md:px-12 max-w-6xl mx-auto pb-40"
+        className="px-6 md:px-12 max-w-6xl mx-auto pb-20 md:pb-40"
         aria-label="Galerie d'œuvres"
       >
         <motion.div layout className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
@@ -125,7 +125,8 @@ export default function GalleryClient() {
       {/* Scroll to top — fixed, discret */}
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        className="fixed bottom-8 right-8 z-40 w-10 h-10 flex items-center justify-center rounded-full bg-white/70 backdrop-blur-sm border border-stone-200 text-stone-400 hover:text-charcoal hover:border-stone-400 transition-all duration-300 shadow-sm"
+        className="fixed z-40 w-11 h-11 flex items-center justify-center rounded-full bg-white/70 backdrop-blur-sm border border-stone-200 text-stone-400 hover:text-charcoal hover:border-stone-400 transition-all duration-300 shadow-sm"
+        style={{ bottom: 'max(2rem, env(safe-area-inset-bottom))', right: 'max(2rem, env(safe-area-inset-right))' }}
         aria-label="Remonter en haut de page"
       >
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

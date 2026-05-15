@@ -36,6 +36,7 @@ export default function Navbar() {
           ? 'bg-white/96 backdrop-blur-sm border-b border-stone-100 shadow-sm shadow-stone-50'
           : 'bg-transparent'
       }`}
+      style={{ paddingTop: 'env(safe-area-inset-top, 0px)' }}
     >
       <nav className="w-full h-16 flex items-center">
         {/* Logo */}
@@ -70,7 +71,7 @@ export default function Navbar() {
 
         {/* Hamburger mobile */}
         <button
-          className="md:hidden flex flex-col justify-center gap-[5px] w-8 h-8 ml-auto"
+          className="md:hidden flex flex-col items-center justify-center gap-[5px] w-11 h-11 ml-auto"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label={menuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
           aria-expanded={menuOpen}
@@ -95,8 +96,8 @@ export default function Navbar() {
 
       {/* Menu mobile */}
       <div
-        className={`md:hidden overflow-hidden transition-all duration-400 ease-in-out ${
-          menuOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'
+        className={`md:hidden overflow-hidden transition-all duration-500 ease-in-out ${
+          menuOpen ? 'max-h-[90dvh] opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
         <ul
@@ -107,7 +108,7 @@ export default function Navbar() {
             <li key={link.href}>
               <Link
                 href={link.href}
-                className={`text-xs tracking-wider uppercase transition-colors duration-300 ${
+                className={`text-xs tracking-wider uppercase transition-colors duration-300 py-3 ${
                   pathname === link.href ? 'text-charcoal' : 'text-stone-400'
                 }`}
               >
