@@ -38,7 +38,7 @@ export default function FeaturedImages() {
             initial={{ opacity: 0, scale: 0.97 }}
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 1.3, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
-            className="relative aspect-[4/5] bg-stone-100 overflow-hidden group md:mt-16"
+            className="relative aspect-[4/5] bg-stone-100 overflow-hidden group"
           >
             <Image
               src="/images/featured/featured-2.jpg"
