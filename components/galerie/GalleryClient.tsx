@@ -77,13 +77,24 @@ export default function GalleryClient() {
                 className="relative aspect-square bg-stone-100 overflow-hidden group focus:outline-none focus-visible:ring-2 focus-visible:ring-charcoal focus-visible:ring-offset-2"
                 aria-label={`Ouvrir ${item.title ?? item.alt}`}
               >
-                <Image
-                  src={item.src}
-                  alt={item.alt}
-                  fill
-                  className="object-cover group-hover:scale-[1.04] transition-transform duration-700"
-                  sizes="(max-width: 768px) 50vw, 33vw"
-                />
+{item.video ? (
+                  <video
+                    className="absolute inset-0 w-full h-full object-cover"
+                    src={item.video}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                  />
+                ) : (
+                  <Image
+                    src={item.src}
+                    alt={item.alt}
+                    fill
+                    className="object-cover group-hover:scale-[1.04] transition-transform duration-700"
+                    sizes="(max-width: 768px) 50vw, 33vw"
+                  />
+                )}
 
                 {/* Hover overlay */}
                 <div className="absolute inset-0 bg-charcoal/0 group-hover:bg-charcoal/8 transition-colors duration-400" />

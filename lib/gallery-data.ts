@@ -7,6 +7,7 @@ export interface GalleryItem {
   alt: string
   title?: string
   description?: string
+  video?: string
 }
 
 // TODO: Remplacer tous les items par vos vraies images
@@ -738,6 +739,7 @@ export const galleryItems: GalleryItem[] = [
     id: 'a1',
     category: 'animale',
     src: '/images/gallery/animale/a1.jpg',
+    video: '/videos/gallery/a1.mp4',
     alt: 'TODO: Description visuel communication animale 1',
     title: 'Communication 1',
   },
@@ -745,6 +747,7 @@ export const galleryItems: GalleryItem[] = [
     id: 'a2',
     category: 'animale',
     src: '/images/gallery/animale/a2.jpg',
+    video: '/videos/gallery/a2.mp4',
     alt: 'TODO: Description visuel communication animale 2',
     title: 'Communication 2',
   },
