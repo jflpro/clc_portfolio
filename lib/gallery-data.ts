@@ -317,50 +317,6 @@ export const galleryItems: GalleryItem[] = [
   },
 
   {
-    id: 'v37',
-    category: 'vitrines',
-    src: '/images/gallery/vitrines/v37.png',
-    alt: 'Vitrine commerciale 37',
-    title: 'Vitrine 37',
-  },
-  {
-    id: 'v38',
-    category: 'vitrines',
-    src: '/images/gallery/vitrines/v38.png',
-    alt: 'Vitrine commerciale 38',
-    title: 'Vitrine 38',
-  },
-  {
-    id: 'v39',
-    category: 'vitrines',
-    src: '/images/gallery/vitrines/v39.png',
-    alt: 'Vitrine commerciale 39',
-    title: 'Vitrine 39',
-  },
-
-  {
-    id: 'v40',
-    category: 'vitrines',
-    src: '/images/gallery/vitrines/v40.png',
-    alt: 'Vitrine commerciale 40',
-    title: 'Vitrine 40',
-  },
-  {
-    id: 'v41',
-    category: 'vitrines',
-    src: '/images/gallery/vitrines/v41.png',
-    alt: 'Vitrine commerciale 41',
-    title: 'Vitrine 41',
-  },
-  {
-    id: 'v42',
-    category: 'vitrines',
-    src: '/images/gallery/vitrines/v42.png',
-    alt: 'Vitrine commerciale 42',
-    title: 'Vitrine 42',
-  },
-
-  {
     id: 'v43',
     category: 'vitrines',
     src: '/images/gallery/vitrines/v43.png',
