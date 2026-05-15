@@ -38,9 +38,7 @@ export default function IntroAnimation() {
   const router = useRouter()
   const lRef = useRef<HTMLDivElement>(null)
   const outerRef = useRef<HTMLDivElement>(null)
-  const videoRef = useRef<HTMLVideoElement>(null)
   const [circleOffset, setCircleOffset] = useState(0)
-  const [showVideo, setShowVideo] = useState(false)
 
   useEffect(() => {
     if (lRef.current && outerRef.current) {
@@ -61,20 +59,11 @@ export default function IntroAnimation() {
 
     const timer = setTimeout(() => {
       sessionStorage.setItem('clc_intro_seen', '1')
-      setShowVideo(true)
+      router.push('/home')
     }, 4800)
 
     return () => clearTimeout(timer)
   }, [router])
-
-  useEffect(() => {
-    if (showVideo && videoRef.current) {
-      videoRef.current.play()
-      const onEnd = () => router.push('/galerie')
-      videoRef.current.addEventListener('ended', onEnd)
-      return () => videoRef.current?.removeEventListener('ended', onEnd)
-    }
-  }, [showVideo, router])
 
   return (
     <div ref={outerRef} className="fixed inset-0 bg-white flex flex-col items-center justify-center">
@@ -145,17 +134,6 @@ export default function IntroAnimation() {
         <div className="w-px h-6 bg-stone-200 mx-auto" />
       </motion.div>
 
-      {showVideo && (
-        <div className="fixed inset-0 z-50 bg-black flex items-center justify-center">
-          <video
-            ref={videoRef}
-            className="max-w-full max-h-full"
-            src="/videos/intro-transition.mp4"
-            muted
-            playsInline
-          />
-        </div>
-      )}
     </div>
   )
 }
