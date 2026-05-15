@@ -33,10 +33,14 @@ export default function Services() {
   return (
     <section
       ref={ref}
-      className="py-28 md:py-40 bg-mist"
+      className="py-28 md:py-40 bg-mist relative overflow-hidden"
       aria-labelledby="services-heading"
     >
-      <div className="max-w-6xl mx-auto px-6 md:px-12">
+      <div
+        className="absolute inset-0 bg-center bg-cover"
+        style={{ backgroundImage: "url('/images/services-bg.png')", opacity: 0.2 }}
+      />
+      <div className="max-w-6xl mx-auto px-6 md:px-12 relative z-10">
         {/* En-tête */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
