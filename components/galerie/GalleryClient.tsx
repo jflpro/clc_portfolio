@@ -85,8 +85,15 @@ export default function GalleryClient() {
                   sizes="(max-width: 768px) 50vw, 33vw"
                 />
 
-                {/* Hover overlay */}
-                <div className="absolute inset-0 bg-charcoal/0 group-hover:bg-charcoal/8 transition-colors duration-400" />
+                {/* Hover video */}
+                <video
+                  className="absolute inset-0 w-full h-full object-cover"
+                  src="/videos/777.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                />
               </motion.button>
             ))}
           </AnimatePresence>
