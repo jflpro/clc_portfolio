@@ -47,14 +47,32 @@ export default function About() {
           >
             {/* TODO: Remplacer par votre texte de présentation */}
             <p className="text-stone-500 leading-relaxed font-light text-base md:text-lg">
-              Je peins la lumière là où elle traverse — sur le verre, sur les
-              vitrines, sur toutes ces surfaces qui séparent et relient à la
-              fois. Mon travail naît d&apos;une observation profonde : des
-              animaux, de la nature, des silences entre les choses.
+              Ma démarche consiste à venir à votre rencontre, à m’imprégner de
+              votre univers et de l’atmosphère de votre lieu, afin de comprendre
+              ce qui vous anime.
             </p>
             <p className="text-stone-500 leading-relaxed font-light text-base md:text-lg">
-              Chaque création est un dialogue. Entre moi et l&apos;espace.
-              Entre l&apos;espace et celui qui le traverse.
+              De cette immersion naît une œuvre pensée pour sublimer votre
+              vitrine, éveiller la curiosité des passants et inviter chacun à
+              franchir votre porte, tout en inspirant les personnes qui vivent
+              et travaillent dans ce lieu.
+            </p>
+            <p className="text-stone-500 leading-relaxed font-light text-base md:text-lg">
+              Je peins en travaillant avec la lumière : c&apos;est un jeu
+              d&apos;absences et de présences de la peinture.
+            </p>
+            <p className="text-stone-500 leading-relaxed font-light text-base md:text-lg">
+              Sur le verre, sur les vitrines, sur toutes ces surfaces qui
+              séparent et relient.
+            </p>
+            <p className="text-stone-500 leading-relaxed font-light text-base md:text-lg">
+              Mon travail naît d&apos;une observation profonde et de ressentis
+              : ceux des animaux, de la nature, de cette énergie que l&apos;on
+              nomme la vie.
+            </p>
+            <p className="text-stone-500 leading-relaxed font-light text-base md:text-lg">
+              Chaque création est un dialogue entre l&apos;espace et celui dont
+              le regard la traverse.
             </p>
 
             <div className="pt-4">
