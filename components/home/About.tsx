@@ -15,7 +15,7 @@ export default function About() {
       aria-labelledby="about-heading"
     >
       <div className="max-w-6xl mx-auto px-6 md:px-12">
-        <div className="grid md:grid-cols-[1fr_2fr] gap-16 md:gap-24 items-center">
+        <div className="grid md:grid-cols-[1fr_2fr] gap-16 md:gap-24 items-start">
           {/* Titre */}
           <motion.div
             initial={{ opacity: 0, x: -24 }}
