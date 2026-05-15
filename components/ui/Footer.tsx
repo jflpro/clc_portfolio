@@ -18,8 +18,8 @@ export default function Footer() {
             <Image
               src="/images/intro/BCLC.png"
               alt="CLC"
-              width={48}
-              height={48}
+              width={96}
+              height={96}
               className="mb-1"
             />
             <p className="text-stone-400 text-xs font-light tracking-wide">
