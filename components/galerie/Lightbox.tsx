@@ -64,15 +64,27 @@ export default function Lightbox({
           className="relative z-10 max-w-4xl w-full mx-8 md:mx-16"
           onClick={(e) => e.stopPropagation()}
         >
-          {/* Image */}
+          {/* Image / Vidéo */}
           <div className="relative aspect-[4/3] bg-stone-100">
-            <Image
-              src={item.src}
-              alt={item.alt}
-              fill
-              className="object-contain"
-              sizes="(max-width: 768px) 100vw, 80vw"
-            />
+            {item.video ? (
+              <video
+                className="absolute inset-0 w-full h-full object-contain"
+                src={item.video}
+                autoPlay
+                loop
+                muted
+                playsInline
+                controls
+              />
+            ) : (
+              <Image
+                src={item.src}
+                alt={item.alt}
+                fill
+                className="object-contain"
+                sizes="(max-width: 768px) 100vw, 80vw"
+              />
+            )}
           </div>
 
           {/* Caption */}
