@@ -87,7 +87,7 @@ export default function ContactContent() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
           >
-            <p className="text-xs tracking-[0.28em] uppercase text-stone-400 mb-6">
+            <p className="text-xs tracking-[0.28em] uppercase text-stone-500 mb-6">
               {t('label')}
             </p>
             <h1 className="font-serif text-5xl md:text-6xl text-charcoal leading-[1.1] mb-12">
@@ -97,7 +97,7 @@ export default function ContactContent() {
             <div className="space-y-8 text-sm font-light">
               {/* Email */}
               <div>
-                <p className="text-xs tracking-[0.2em] uppercase text-stone-400 mb-1.5">
+                <p className="text-xs tracking-[0.2em] uppercase text-stone-500 mb-1.5">
                   {t('emailLabel')}
                 </p>
                 <a
@@ -110,7 +110,7 @@ export default function ContactContent() {
 
               {/* Téléphone */}
               <div>
-                <p className="text-xs tracking-[0.2em] uppercase text-stone-400 mb-1.5">
+                <p className="text-xs tracking-[0.2em] uppercase text-stone-500 mb-1.5">
                   {t('telLabel')}
                 </p>
                 <a
@@ -123,7 +123,7 @@ export default function ContactContent() {
 
               {/* Instagram */}
               <div>
-                <p className="text-xs tracking-[0.2em] uppercase text-stone-400 mb-1.5">
+                <p className="text-xs tracking-[0.2em] uppercase text-stone-500 mb-1.5">
                   {t('instagramLabel')}
                 </p>
                 <a
@@ -138,7 +138,7 @@ export default function ContactContent() {
             </div>
 
             {/* Note de délai de réponse */}
-            <p className="mt-12 text-stone-400 text-xs font-light leading-relaxed max-w-xs">
+            <p className="mt-12 text-stone-500 text-xs font-light leading-relaxed max-w-xs">
               {t('responseNote')}
             </p>
           </motion.div>
@@ -159,12 +159,12 @@ export default function ContactContent() {
                 <p className="font-serif text-3xl text-charcoal mb-4">
                   {t('successTitle')}
                 </p>
-                <p className="text-stone-500 font-light">
+                <p className="text-stone-600 font-light">
                   {t('successBody')}
                 </p>
                 <button
                   onClick={() => setStatus('idle')}
-                  className="mt-8 text-xs tracking-[0.2em] uppercase text-stone-400 border-b border-stone-300 pb-0.5 hover:text-charcoal hover:border-charcoal transition-colors duration-300"
+                  className="mt-8 text-xs tracking-[0.2em] uppercase text-stone-500 border-b border-stone-300 pb-0.5 hover:text-charcoal hover:border-charcoal transition-colors duration-300"
                 >
                   {t('successButton')}
                 </button>
@@ -179,7 +179,7 @@ export default function ContactContent() {
                 <div>
                   <label
                     htmlFor="name"
-                    className="block text-xs tracking-[0.2em] uppercase text-stone-400 mb-2.5"
+                    className="block text-xs tracking-[0.2em] uppercase text-stone-500 mb-2.5"
                   >
                     {t('formNom')}
                   </label>
@@ -200,7 +200,7 @@ export default function ContactContent() {
                 <div>
                   <label
                     htmlFor="email"
-                    className="block text-xs tracking-[0.2em] uppercase text-stone-400 mb-2.5"
+                    className="block text-xs tracking-[0.2em] uppercase text-stone-500 mb-2.5"
                   >
                     {t('formEmail')}
                   </label>
@@ -221,7 +221,7 @@ export default function ContactContent() {
                 <div>
                   <label
                     htmlFor="subject"
-                    className="block text-xs tracking-[0.2em] uppercase text-stone-400 mb-2.5"
+                    className="block text-xs tracking-[0.2em] uppercase text-stone-500 mb-2.5"
                   >
                     {t('formSujet')}
                   </label>
@@ -240,7 +240,7 @@ export default function ContactContent() {
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-xs tracking-[0.2em] uppercase text-stone-400 mb-2.5"
+                    className="block text-xs tracking-[0.2em] uppercase text-stone-500 mb-2.5"
                   >
                     {t('formMessage')}
                   </label>

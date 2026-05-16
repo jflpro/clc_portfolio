@@ -99,7 +99,7 @@ export default function Lightbox({
           )}
 
           {/* Compteur */}
-          <p className="mt-2 text-center text-stone-500 text-xs">
+          <p className="mt-2 text-center text-stone-600 text-xs">
             {currentIndex + 1} / {items.length}
           </p>
         </motion.div>
@@ -108,7 +108,7 @@ export default function Lightbox({
       {/* Fermer */}
       <button
         onClick={onClose}
-         className="absolute top-5 right-5 z-20 text-stone-500 hover:text-charcoal transition-colors duration-200 text-sm tracking-widest p-4"
+         className="absolute top-5 right-5 z-20 text-stone-600 hover:text-charcoal transition-colors duration-200 text-sm tracking-widest p-4"
         aria-label={t('close')}
       >
         ✕
@@ -121,7 +121,7 @@ export default function Lightbox({
             e.stopPropagation()
             onNavigate(currentIndex - 1)
           }}
-          className="absolute left-4 md:left-6 top-1/2 -translate-y-1/2 z-20 text-stone-500 hover:text-charcoal transition-colors duration-200 p-4 text-xl"
+          className="absolute left-4 md:left-6 top-1/2 -translate-y-1/2 z-20 text-stone-600 hover:text-charcoal transition-colors duration-200 p-4 text-xl"
           aria-label={t('prev')}
         >
           ←
@@ -135,7 +135,7 @@ export default function Lightbox({
             e.stopPropagation()
             onNavigate(currentIndex + 1)
           }}
-          className="absolute right-4 md:right-6 top-1/2 -translate-y-1/2 z-20 text-stone-500 hover:text-charcoal transition-colors duration-200 p-4 text-xl"
+          className="absolute right-4 md:right-6 top-1/2 -translate-y-1/2 z-20 text-stone-600 hover:text-charcoal transition-colors duration-200 p-4 text-xl"
           aria-label={t('next')}
         >
           →

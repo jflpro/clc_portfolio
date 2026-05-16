@@ -17,6 +17,8 @@
     "galerie": "Galeria",
     "animale": "Comunicação animal",
     "contact": "Contacto",
+    "aPropos": "Sobre mim",
+    "mentionsLegales": "Avisos legais",
     "instagram": "Instagram",
     "copyright": "© {year} CLC — Todos os direitos reservados",
     "bottomTagline": "Pintura · Arte · Sensibilidade"
@@ -127,6 +129,12 @@
     "titre": "Blog",
     "comingSoon": "Coming soon"
   },
+  "MentionsLegales": {
+    "label": "Informações",
+    "titre": "Avisos legais",
+    "p1": "Este site é editado por CLC.",
+    "p2": "Alojamento: Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, EUA."
+  },
   "Lightbox": {
     "imageAria": "Imagem {current} de {total}",
     "close": "Fechar",
@@ -149,6 +157,8 @@
     "ebookDesc": "Ebook em breve",
     "blogTitle": "Blog",
     "blogDesc": "Blog em breve",
+    "mentionsLegalesTitle": "Avisos legais",
+    "mentionsLegalesDesc": "Avisos legais do site CLC",
     "siteTitle": "CLC — Artista | Pintura em Vitrines & Criações Artísticas",
     "siteDesc": "A CLC é uma artista especializada em pintura em vitrines, criações artísticas em superfícies de vidro e comunicação animal. Um universo de pureza, sensibilidade e sofisticação.",
     "ogTitle": "CLC — Artista | Pintura em Vitrines",

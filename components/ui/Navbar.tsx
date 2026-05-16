@@ -66,7 +66,7 @@ export default function Navbar() {
                 className={`text-xs tracking-wider uppercase transition-all duration-300 ${
                   pathname === link.href
                     ? 'text-charcoal border-b border-charcoal pb-0.5'
-                    : 'text-stone-400 hover:text-charcoal'
+                    : 'text-stone-500 hover:text-charcoal'
                 }`}
               >
                 {link.label}
@@ -118,7 +118,7 @@ export default function Navbar() {
               <Link
                 href={link.href}
                 className={`text-xs tracking-wider uppercase transition-colors duration-300 py-3 ${
-                  pathname === link.href ? 'text-charcoal' : 'text-stone-400'
+                  pathname === link.href ? 'text-charcoal' : 'text-stone-500'
                 }`}
               >
                 {link.label}

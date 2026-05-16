@@ -23,7 +23,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
-            className="text-xs tracking-[0.28em] uppercase text-stone-400 mb-8"
+            className="text-xs tracking-[0.28em] uppercase text-stone-500 mb-8"
           >
             {t('accroche')}
           </motion.p>
@@ -36,7 +36,7 @@ export default function Hero() {
             className="font-serif text-5xl md:text-7xl leading-[1.08] text-charcoal mb-6 text-balance"
           >
             {t('titre1')}{' '}
-            <em className="not-italic text-stone-400">{t('titre1Em')}</em>
+            <em className="not-italic text-stone-500">{t('titre1Em')}</em>
             <br />
             {t('titre2')}
           </motion.h1>
@@ -46,7 +46,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
-            className="text-base md:text-lg text-stone-500 max-w-md leading-relaxed mb-12 font-light"
+            className="text-base md:text-lg text-stone-600 max-w-md leading-relaxed mb-12 font-light"
           >
             {t('sousTitre')}
           </motion.p>

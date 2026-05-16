@@ -30,7 +30,7 @@ export default function Footer() {
               height={96}
               className="mb-1"
             />
-            <p className="text-stone-400 text-xs font-light tracking-wide">
+            <p className="text-stone-500 text-xs font-light tracking-wide">
               {t('Footer.tagline')}
             </p>
           </div>
@@ -41,7 +41,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-xs tracking-wider uppercase text-stone-400 hover:text-charcoal transition-colors duration-300"
+                    className="text-xs tracking-wider uppercase text-stone-500 hover:text-charcoal transition-colors duration-300"
                   >
                     {link.label}
                   </Link>
@@ -55,7 +55,7 @@ export default function Footer() {
               href="https://instagram.com/VOTRE_COMPTE_INSTAGRAM"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs tracking-wider uppercase text-stone-400 hover:text-charcoal transition-colors duration-300"
+              className="text-xs tracking-wider uppercase text-stone-500 hover:text-charcoal transition-colors duration-300"
             >
               {t('Footer.instagram')}
             </a>
@@ -63,10 +63,10 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 pt-6 border-t border-stone-50 flex flex-col sm:flex-row justify-between gap-3">
-          <p className="text-stone-300 text-xs">
+          <p className="text-stone-500 text-xs">
             &copy; {t('Footer.copyright').replace('{year}', String(new Date().getFullYear()))}
           </p>
-          <p className="text-stone-200 text-xs">
+          <p className="text-stone-400 text-xs">
             {t('Footer.bottomTagline')}
           </p>
         </div>

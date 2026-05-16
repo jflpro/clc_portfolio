@@ -39,7 +39,7 @@ export default function AboutContent() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
         >
-          <p className="text-xs tracking-[0.28em] uppercase text-stone-400 mb-6">
+          <p className="text-xs tracking-[0.28em] uppercase text-stone-500 mb-6">
             {t('label')}
           </p>
           <h1 className="font-serif text-5xl md:text-6xl text-charcoal leading-[1.1] mb-12">

@@ -29,7 +29,7 @@ export default function GalleryClient() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
         >
-          <p className="text-xs tracking-[0.28em] uppercase text-stone-400 mb-4">
+          <p className="text-xs tracking-[0.28em] uppercase text-stone-500 mb-4">
             {t('label')}
           </p>
           <h1 className="font-serif text-5xl md:text-6xl text-charcoal">
@@ -49,7 +49,7 @@ export default function GalleryClient() {
                   className={`text-xs tracking-wider uppercase transition-all duration-300 py-2 ${
                     activeFilter === cat.key
                       ? 'text-charcoal border-b border-charcoal'
-                      : 'text-stone-400 hover:text-stone-600'
+                      : 'text-stone-500 hover:text-stone-600'
                   }`}
                   aria-pressed={activeFilter === cat.key}
                 >
@@ -107,7 +107,7 @@ export default function GalleryClient() {
         </motion.div>
 
         {filtered.length === 0 && (
-          <p className="text-center text-stone-400 text-sm py-20 tracking-wide">
+          <p className="text-center text-stone-500 text-sm py-20 tracking-wide">
             {t('emptyState')}
           </p>
         )}
@@ -128,7 +128,7 @@ export default function GalleryClient() {
       {/* Scroll to top — fixed, discret */}
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        className="fixed z-40 w-11 h-11 flex items-center justify-center rounded-full bg-white/70 backdrop-blur-sm border border-stone-200 text-stone-400 hover:text-charcoal hover:border-stone-400 transition-all duration-300 shadow-sm"
+        className="fixed z-40 w-11 h-11 flex items-center justify-center rounded-full bg-white/70 backdrop-blur-sm border border-stone-200 text-stone-500 hover:text-charcoal hover:border-stone-400 transition-all duration-300 shadow-sm"
         style={{ bottom: 'max(2rem, env(safe-area-inset-bottom))', right: 'max(2rem, env(safe-area-inset-right))' }}
         aria-label={t('scrollTopAria')}
       >

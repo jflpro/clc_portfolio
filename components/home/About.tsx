@@ -26,7 +26,7 @@ export default function About() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 1.1, ease: [0.25, 0.1, 0.25, 1] }}
           >
-            <p className="text-xs tracking-[0.28em] uppercase text-stone-400 mb-6">
+            <p className="text-xs tracking-[0.28em] uppercase text-stone-500 mb-6">
               {t('label')}
             </p>
             {/* TODO: Remplacer par votre titre de section */}
@@ -45,22 +45,22 @@ export default function About() {
             transition={{ duration: 1.1, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
             className="space-y-6"
           >
-            <p className="text-stone-500 leading-relaxed font-light text-base md:text-lg">
+            <p className="text-stone-600 leading-relaxed font-light text-base md:text-lg">
               {t('p1')}
             </p>
-            <p className="text-stone-500 leading-relaxed font-light text-base md:text-lg">
+            <p className="text-stone-600 leading-relaxed font-light text-base md:text-lg">
               {t('p2')}
             </p>
-            <p className="text-stone-500 leading-relaxed font-light text-base md:text-lg">
+            <p className="text-stone-600 leading-relaxed font-light text-base md:text-lg">
               {t('p3')}
             </p>
-            <p className="text-stone-500 leading-relaxed font-light text-base md:text-lg">
+            <p className="text-stone-600 leading-relaxed font-light text-base md:text-lg">
               {t('p4')}
             </p>
-            <p className="text-stone-500 leading-relaxed font-light text-base md:text-lg">
+            <p className="text-stone-600 leading-relaxed font-light text-base md:text-lg">
               {t('p5')}
             </p>
-            <p className="text-stone-500 leading-relaxed font-light text-base md:text-lg">
+            <p className="text-stone-600 leading-relaxed font-light text-base md:text-lg">
               {t('p6')}
             </p>
 
@@ -68,7 +68,7 @@ export default function About() {
             <div className="pt-4">
               <Link
                 href={`/${locale}/animale`}
-                className="text-xs tracking-[0.2em] uppercase text-stone-400 border-b border-stone-300 pb-0.5 hover:text-charcoal hover:border-charcoal transition-colors duration-300"
+                className="text-xs tracking-[0.2em] uppercase text-stone-500 border-b border-stone-300 pb-0.5 hover:text-charcoal hover:border-charcoal transition-colors duration-300"
               >
                 {t('cta')}
               </Link>

@@ -34,7 +34,7 @@ export default function LanguageSwitcher() {
             className={`text-xs tracking-wider uppercase transition-colors duration-200 px-1.5 py-0.5 rounded ${
               isActive
                 ? 'text-charcoal font-medium'
-                : 'text-stone-300 hover:text-stone-500'
+                : 'text-stone-500 hover:text-stone-700'
             }`}
             aria-current={isActive ? 'true' : undefined}
           >

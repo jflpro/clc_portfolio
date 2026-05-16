@@ -23,7 +23,7 @@ export default function AnimalContent() {
           transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
           className="max-w-2xl"
         >
-          <p className="text-xs tracking-[0.28em] uppercase text-stone-400 mb-6">
+          <p className="text-xs tracking-[0.28em] uppercase text-stone-500 mb-6">
             {t('label')}
           </p>
           <h1 className="font-serif text-5xl md:text-6xl text-charcoal leading-[1.1] mb-8">
@@ -31,7 +31,7 @@ export default function AnimalContent() {
             <br />
             {t('titre2')}
           </h1>
-          <p className="text-base md:text-lg text-stone-500 leading-relaxed font-light max-w-lg">
+          <p className="text-base md:text-lg text-stone-600 leading-relaxed font-light max-w-lg">
             {t('intro')}
           </p>
         </motion.div>
@@ -71,7 +71,7 @@ export default function AnimalContent() {
             <h2 className="font-serif text-3xl md:text-4xl text-charcoal mb-8 leading-tight">
               {t('sousTitre')}
             </h2>
-            <div className="space-y-5 text-stone-500 font-light leading-relaxed">
+            <div className="space-y-5 text-stone-600 font-light leading-relaxed">
               <p>{t('p1')}</p>
               <p>{t('p2')}</p>
               <p>{t('p3')}</p>
@@ -85,10 +85,10 @@ export default function AnimalContent() {
             transition={{ duration: 1, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
             className="flex flex-col justify-center"
           >
-            <p className="text-xs tracking-[0.28em] uppercase text-stone-400 mb-6">
+            <p className="text-xs tracking-[0.28em] uppercase text-stone-500 mb-6">
               {t('noteLabel')}
             </p>
-            <blockquote className="font-serif text-xl md:text-2xl text-stone-400 leading-relaxed italic">
+            <blockquote className="font-serif text-xl md:text-2xl text-stone-500 leading-relaxed italic">
               {t('blockquote')}
             </blockquote>
           </motion.div>
@@ -120,12 +120,12 @@ export default function AnimalContent() {
 
       {/* CTA vers contact */}
       <section className="max-w-6xl mx-auto px-6 md:px-12 pb-32 text-center">
-        <p className="text-stone-400 font-light text-sm mb-6">
+        <p className="text-stone-500 font-light text-sm mb-6">
           {t('ctaText')}
         </p>
         <Link
           href={`/${locale}/contact`}
-          className="inline-block text-xs tracking-[0.2em] uppercase text-stone-400 border-b border-stone-300 pb-0.5 hover:text-charcoal hover:border-charcoal transition-colors duration-300"
+          className="inline-block text-xs tracking-[0.2em] uppercase text-stone-500 border-b border-stone-300 pb-0.5 hover:text-charcoal hover:border-charcoal transition-colors duration-300"
         >
           {t('ctaLink')}
         </Link>

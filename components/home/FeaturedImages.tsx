@@ -64,7 +64,7 @@ export default function FeaturedImages() {
         >
           <Link
             href={`/${localeStr}/galerie`}
-            className="text-xs tracking-[0.2em] uppercase text-stone-400 border-b border-stone-300 pb-0.5 hover:text-charcoal hover:border-charcoal transition-colors duration-300"
+            className="text-xs tracking-[0.2em] uppercase text-stone-500 border-b border-stone-300 pb-0.5 hover:text-charcoal hover:border-charcoal transition-colors duration-300"
           >
             {t('FeaturedImages.cta')}
           </Link>

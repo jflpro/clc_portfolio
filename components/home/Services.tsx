@@ -65,7 +65,7 @@ export default function Services() {
               <h3 className="font-serif text-xl text-charcoal mb-4">
                 {service.title}
               </h3>
-              <p className="text-stone-500 leading-relaxed text-sm font-light">
+              <p className="text-stone-600 leading-relaxed text-sm font-light">
                 {service.description}
               </p>
             </motion.div>
@@ -92,7 +92,7 @@ export default function Services() {
         >
           <Link
             href={`/${locale}/contact`}
-            className="text-xs tracking-[0.2em] uppercase text-stone-400 border-b border-stone-300 pb-0.5 hover:text-charcoal hover:border-charcoal transition-colors duration-300"
+            className="text-xs tracking-[0.2em] uppercase text-stone-500 border-b border-stone-300 pb-0.5 hover:text-charcoal hover:border-charcoal transition-colors duration-300"
           >
             {t('cta')}
           </Link>

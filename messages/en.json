@@ -17,6 +17,8 @@
     "galerie": "Gallery",
     "animale": "Animal communication",
     "contact": "Contact",
+    "aPropos": "About me",
+    "mentionsLegales": "Legal notice",
     "instagram": "Instagram",
     "copyright": "© {year} CLC — All rights reserved",
     "bottomTagline": "Painting · Art · Sensitivity"
@@ -127,6 +129,12 @@
     "titre": "Blog",
     "comingSoon": "Coming soon"
   },
+  "MentionsLegales": {
+    "label": "Information",
+    "titre": "Legal notice",
+    "p1": "This site is published by CLC.",
+    "p2": "Hosting: Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, USA."
+  },
   "Lightbox": {
     "imageAria": "Image {current} of {total}",
     "close": "Close",
@@ -149,6 +157,8 @@
     "ebookDesc": "Ebook coming soon",
     "blogTitle": "Blog",
     "blogDesc": "Blog coming soon",
+    "mentionsLegalesTitle": "Legal notice",
+    "mentionsLegalesDesc": "Legal notice of CLC website",
     "siteTitle": "CLC — Artist | Window Painting & Artistic Creations",
     "siteDesc": "CLC is an artist specialized in window painting, artistic creations on glass surfaces and animal communication. A universe of purity, sensitivity and sophistication.",
     "ogTitle": "CLC — Artist | Window Painting",

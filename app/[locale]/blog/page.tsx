@@ -19,7 +19,7 @@ export default function BlogPage({ params: { locale } }: { params: { locale: str
       <main className="relative min-h-[100dvh] bg-white flex items-center justify-center">
         <div className="text-center px-6">
           <h1 className="font-serif text-5xl md:text-6xl text-charcoal mb-4">{t('titre')}</h1>
-          <p className="text-stone-400 text-lg tracking-wide">{t('comingSoon')}</p>
+          <p className="text-stone-500 text-lg tracking-wide">{t('comingSoon')}</p>
         </div>
       </main>
       <Footer />
