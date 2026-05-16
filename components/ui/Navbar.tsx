@@ -22,6 +22,7 @@ export default function Navbar() {
     { href: `/${locale}/animale`, label: t('animale') },
     { href: `/${locale}/a-propos`, label: t('aPropos') },
     { href: `/${locale}/contact`, label: t('contact') },
+    { href: `/${locale}/blog`, label: t('blog') },
   ]
 
   useEffect(() => {

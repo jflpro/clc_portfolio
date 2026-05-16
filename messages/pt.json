@@ -6,6 +6,7 @@
     "animale": "Comunicação animal",
     "aPropos": "Sobre mim",
     "contact": "Contacto",
+    "blog": "Blog",
     "logoAria": "CLC — Voltar ao início",
     "menuOpen": "Abrir menu",
     "menuClose": "Fechar menu"
@@ -120,7 +121,11 @@
   },
   "EbookPage": {
     "titre": "Ebook",
-    "comingSoon": "Em breve"
+    "comingSoon": "Coming soon"
+  },
+  "BlogPage": {
+    "titre": "Blog",
+    "comingSoon": "Coming soon"
   },
   "Lightbox": {
     "imageAria": "Imagem {current} de {total}",
@@ -142,6 +147,8 @@
     "contactDesc": "Contacte a CLC para um projeto de pintura em vitrines, uma criação artística personalizada ou qualquer outro pedido.",
     "ebookTitle": "Ebook",
     "ebookDesc": "Ebook em breve",
+    "blogTitle": "Blog",
+    "blogDesc": "Blog em breve",
     "siteTitle": "CLC — Artista | Pintura em Vitrines & Criações Artísticas",
     "siteDesc": "A CLC é uma artista especializada em pintura em vitrines, criações artísticas em superfícies de vidro e comunicação animal. Um universo de pureza, sensibilidade e sofisticação.",
     "ogTitle": "CLC — Artista | Pintura em Vitrines",

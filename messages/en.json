@@ -6,6 +6,7 @@
     "animale": "Animal communication",
     "aPropos": "About me",
     "contact": "Contact",
+    "blog": "Blog",
     "logoAria": "CLC — Back to home",
     "menuOpen": "Open menu",
     "menuClose": "Close menu"
@@ -122,6 +123,10 @@
     "titre": "Ebook",
     "comingSoon": "Coming soon"
   },
+  "BlogPage": {
+    "titre": "Blog",
+    "comingSoon": "Coming soon"
+  },
   "Lightbox": {
     "imageAria": "Image {current} of {total}",
     "close": "Close",
@@ -142,6 +147,8 @@
     "contactDesc": "Contact CLC for a window painting project, a custom artistic creation or any other request.",
     "ebookTitle": "Ebook",
     "ebookDesc": "Ebook coming soon",
+    "blogTitle": "Blog",
+    "blogDesc": "Blog coming soon",
     "siteTitle": "CLC — Artist | Window Painting & Artistic Creations",
     "siteDesc": "CLC is an artist specialized in window painting, artistic creations on glass surfaces and animal communication. A universe of purity, sensitivity and sophistication.",
     "ogTitle": "CLC — Artist | Window Painting",
