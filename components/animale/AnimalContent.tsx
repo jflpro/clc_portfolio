@@ -3,8 +3,11 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import Link from 'next/link'
+import { useTranslations, useLocale } from 'next-intl'
 
 export default function AnimalContent() {
+  const t = useTranslations('AnimalPage')
+  const locale = useLocale()
   const textRef = useRef(null)
   const quoteRef = useRef(null)
   const isTextInView = useInView(textRef, { once: true, margin: '-80px' })
@@ -21,18 +24,15 @@ export default function AnimalContent() {
           className="max-w-2xl"
         >
           <p className="text-xs tracking-[0.28em] uppercase text-stone-400 mb-6">
-            Sensibilité · Intuition
+            {t('label')}
           </p>
           <h1 className="font-serif text-5xl md:text-6xl text-charcoal leading-[1.1] mb-8">
-            Communication
+            {t('titre1')}
             <br />
-            animale
+            {t('titre2')}
           </h1>
-          {/* TODO: Remplacer par votre texte d'introduction */}
           <p className="text-base md:text-lg text-stone-500 leading-relaxed font-light max-w-lg">
-            Avant d&apos;être une pratique, la communication animale est une
-            façon d&apos;être au monde. Une écoute que j&apos;ai développée
-            depuis toujours, et qui nourrit profondément mon travail artistique.
+            {t('intro')}
           </p>
         </motion.div>
       </section>
@@ -68,28 +68,13 @@ export default function AnimalContent() {
             animate={isTextInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
           >
-            {/* TODO: Remplacer par votre titre de section */}
             <h2 className="font-serif text-3xl md:text-4xl text-charcoal mb-8 leading-tight">
-              L&apos;écoute comme
-              <br />
-              forme d&apos;art
+              {t('sousTitre')}
             </h2>
-            {/* TODO: Remplacer par votre texte principal */}
             <div className="space-y-5 text-stone-500 font-light leading-relaxed">
-              <p>
-                Je pratique la communication animale depuis des années. Ce
-                n&apos;est pas un outil. C&apos;est un langage que j&apos;ai
-                appris à lire — dans les silences, les gestes, les regards.
-              </p>
-              <p>
-                Ce lien avec le vivant est présent dans chaque œuvre. Il guide
-                ma main, oriente mes couleurs, inspire mes formes.
-              </p>
-              <p>
-                Les animaux m&apos;apprennent la présence absolue — cette
-                qualité d&apos;attention que je cherche aussi à transmettre dans
-                mes créations sur verre.
-              </p>
+              <p>{t('p1')}</p>
+              <p>{t('p2')}</p>
+              <p>{t('p3')}</p>
             </div>
           </motion.div>
 
@@ -101,15 +86,10 @@ export default function AnimalContent() {
             className="flex flex-col justify-center"
           >
             <p className="text-xs tracking-[0.28em] uppercase text-stone-400 mb-6">
-              Note personnelle
+              {t('noteLabel')}
             </p>
-            {/*
-              TODO: Remplacer par votre note personnelle
-              Supprimer ce bloc si vous ne souhaitez pas le garder
-            */}
             <blockquote className="font-serif text-xl md:text-2xl text-stone-400 leading-relaxed italic">
-              &ldquo;TODO : Votre phrase personnelle ici. Une pensée, une
-              anecdote, une conviction qui vous ressemble.&rdquo;
+              {t('blockquote')}
             </blockquote>
           </motion.div>
         </div>
@@ -141,13 +121,13 @@ export default function AnimalContent() {
       {/* CTA vers contact */}
       <section className="max-w-6xl mx-auto px-6 md:px-12 pb-32 text-center">
         <p className="text-stone-400 font-light text-sm mb-6">
-          Vous souhaitez en savoir plus sur cette pratique ?
+          {t('ctaText')}
         </p>
         <Link
-          href="/contact"
+          href={`/${locale}/contact`}
           className="inline-block text-xs tracking-[0.2em] uppercase text-stone-400 border-b border-stone-300 pb-0.5 hover:text-charcoal hover:border-charcoal transition-colors duration-300"
         >
-          Me contacter →
+          {t('ctaLink')}
         </Link>
       </section>
     </div>

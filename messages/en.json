@@ -1,0 +1,153 @@
+{
+  "Navbar": {
+    "home": "Home",
+    "galerie": "Gallery",
+    "ebook": "Ebook",
+    "animale": "Animal communication",
+    "aPropos": "About me",
+    "contact": "Contact",
+    "logoAria": "CLC — Back to home",
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu"
+  },
+  "Footer": {
+    "tagline": "Window painting · Artistic creations",
+    "home": "Home",
+    "galerie": "Gallery",
+    "animale": "Animal communication",
+    "contact": "Contact",
+    "instagram": "Instagram",
+    "copyright": "© {year} CLC — All rights reserved",
+    "bottomTagline": "Painting · Art · Sensitivity"
+  },
+  "Hero": {
+    "accroche": "Window painting · Artistic creations",
+    "titre1": "The art that",
+    "titre1Em": "transforms",
+    "titre2": "your spaces",
+    "sousTitre": "I create vibrant paintings directly on your windows and glass surfaces. Each creation is unique, designed for your space and your energy.",
+    "ctaGalerie": "View creations",
+    "ctaContact": "Contact me",
+    "imgAlt": "CLC Creation"
+  },
+  "About": {
+    "label": "Artistic approach",
+    "titre": "A sensitivity\nthat inhabits\nevery stroke",
+    "p1": "My approach is to come meet you, to immerse myself in your world and the atmosphere of your space, in order to understand what drives you.",
+    "p2": "From this immersion is born a work designed to enhance your window, awaken the curiosity of passersby and invite everyone to cross your doorstep, while inspiring the people who live and work in this space.",
+    "p3": "I paint by working with light: it's a play of absences and presences of paint.",
+    "p4": "On glass, on windows, on all those surfaces that separate and connect.",
+    "p5": "My work is born from deep observation and feelings: those of animals, of nature, of this energy called life.",
+    "p6": "Each creation is a dialogue between the space and the one whose gaze traverses it.",
+    "cta": "Animal communication →"
+  },
+  "FeaturedImages": {
+    "ariaLabel": "Featured images",
+    "img1Alt": "CLC artistic creation",
+    "img2Alt": "CLC artistic creation",
+    "cta": "View all creations →"
+  },
+  "Services": {
+    "titre": "What I offer",
+    "s1Titre": "Storefront windows",
+    "s1Desc": "Painting directly on your windows. Shops, restaurants, hotels — I transform your glass surfaces into living artworks that catch the eye and tell your story.",
+    "s2Titre": "Custom projects",
+    "s2Desc": "Every space has a soul. I create unique compositions adapted to your identity, your vision, your location. From conception to completion.",
+    "s3Titre": "Artistic installations",
+    "s3Desc": "For events, exhibitions and ephemeral spaces. Striking creations designed to leave an imprint in the memory of your visitors.",
+    "cta": "Let's discuss your project →"
+  },
+  "AboutPage": {
+    "label": "About",
+    "titre": "My journey",
+    "p1": "I am an artist passionate about visual creation in all its forms. My work revolves around three axes: window painting, animal communication, and personal artistic creation.",
+    "p2": "Since my first projects, I have had the chance to collaborate with many shopkeepers and individuals to bring their spaces to life through unique and custom-made windows.",
+    "p3": "Animal communication has enriched my practice by bringing a sensitive and intuitive dimension to it. It has allowed me to develop a deeper approach to the bond between humans and animals, which I translate into my creations.",
+    "p4": "Each project is a new adventure for me, an opportunity to tell a story through colors, shapes and textures."
+  },
+  "AnimalPage": {
+    "label": "Sensitivity · Intuition",
+    "titre1": "Animal",
+    "titre2": "communication",
+    "intro": "Before being a practice, animal communication is a way of being in the world. A listening that I have developed since forever, and which deeply nourishes my artistic work.",
+    "sousTitre": "Listening as an art form",
+    "p1": "I have been practicing animal communication for years. It is not a tool. It is a language that I have learned to read — in silences, gestures, glances.",
+    "p2": "This connection with the living is present in every work. It guides my hand, directs my colors, inspires my forms.",
+    "p3": "Animals teach me absolute presence — this quality of attention that I also seek to transmit in my glass creations.",
+    "noteLabel": "Personal note",
+    "blockquote": "\"TODO: Your personal sentence here. A thought, an anecdote, a conviction that resonates with you.\"",
+    "ctaText": "Would you like to know more about this practice?",
+    "ctaLink": "Contact me →"
+  },
+  "ContactPage": {
+    "label": "Contact",
+    "titre": "Let's talk about your project",
+    "emailLabel": "Email",
+    "emailPlaceholder": "your@email.com",
+    "telLabel": "Phone",
+    "telPlaceholder": "+33 X XX XX XX XX",
+    "instagramLabel": "Instagram",
+    "instagramPlaceholder": "@your_account",
+    "responseNote": "I usually respond within 24 to 48 hours. Feel free to describe your project in detail.",
+    "successTitle": "Message sent.",
+    "successBody": "Thank you for your message. I will get back to you very soon.",
+    "successButton": "Send another message",
+    "formNom": "Name *",
+    "formNomPlaceholder": "Your name",
+    "formEmail": "Email *",
+    "formEmailPlaceholder": "your@email.com",
+    "formSujet": "Subject",
+    "formSujetPlaceholder": "Subject of your request",
+    "formMessage": "Message *",
+    "formMessagePlaceholder": "Describe your project, your space, your wishes...",
+    "submitIdle": "Send message",
+    "submitSending": "Sending...",
+    "errorMsg": "An error occurred. Please try again or contact me directly by email."
+  },
+  "GalleryPage": {
+    "label": "Portfolio",
+    "titre": "Gallery",
+    "filterAria": "Filter by category",
+    "sectionAria": "Gallery of works",
+    "emptyState": "No creations in this category yet.",
+    "scrollTopAria": "Scroll back to top",
+    "all": "All",
+    "vitrines": "Storefronts",
+    "oeuvres": "Personal works",
+    "animale": "Animal communication",
+    "autres": "Other creations",
+    "editionLimitee": "Limited edition"
+  },
+  "EbookPage": {
+    "titre": "Ebook",
+    "comingSoon": "Coming soon"
+  },
+  "Lightbox": {
+    "imageAria": "Image {current} of {total}",
+    "close": "Close",
+    "prev": "Previous image",
+    "next": "Next image",
+    "openAria": "Open {title}"
+  },
+  "Metadata": {
+    "homeTitle": "CLC — Artist | Window Painting & Artistic Creations",
+    "homeDesc": "CLC creates window paintings, artistic creations and installations for shops and spaces. Discover her universe.",
+    "galerieTitle": "Gallery",
+    "galerieDesc": "Discover CLC's creations: window paintings, personal works, animal communication and other artistic creations.",
+    "aProposTitle": "About me",
+    "aProposDesc": "Discover my journey, my passion for window painting and animal communication, and the story behind CLC.",
+    "animaleTitle": "Animal Communication",
+    "animaleDesc": "Animal communication is a practice, a sensitivity and a deep source of inspiration for my artistic work.",
+    "contactTitle": "Contact",
+    "contactDesc": "Contact CLC for a window painting project, a custom artistic creation or any other request.",
+    "ebookTitle": "Ebook",
+    "ebookDesc": "Ebook coming soon",
+    "siteTitle": "CLC — Artist | Window Painting & Artistic Creations",
+    "siteDesc": "CLC is an artist specialized in window painting, artistic creations on glass surfaces and animal communication. A universe of purity, sensitivity and sophistication.",
+    "ogTitle": "CLC — Artist | Window Painting",
+    "ogDesc": "An artistic universe of purity, sensitivity and sophistication.",
+    "ogAlt": "CLC — Window painting artist",
+    "twitterTitle": "CLC — Artist | Window Painting",
+    "twitterDesc": "An artistic universe of purity, sensitivity and sophistication."
+  }
+}

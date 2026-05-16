@@ -1,0 +1,153 @@
+{
+  "Navbar": {
+    "home": "Início",
+    "galerie": "Galeria",
+    "ebook": "Ebook",
+    "animale": "Comunicação animal",
+    "aPropos": "Sobre mim",
+    "contact": "Contacto",
+    "logoAria": "CLC — Voltar ao início",
+    "menuOpen": "Abrir menu",
+    "menuClose": "Fechar menu"
+  },
+  "Footer": {
+    "tagline": "Pintura em vitrines · Criações artísticas",
+    "home": "Início",
+    "galerie": "Galeria",
+    "animale": "Comunicação animal",
+    "contact": "Contacto",
+    "instagram": "Instagram",
+    "copyright": "© {year} CLC — Todos os direitos reservados",
+    "bottomTagline": "Pintura · Arte · Sensibilidade"
+  },
+  "Hero": {
+    "accroche": "Pintura em vitrines · Criações artísticas",
+    "titre1": "A arte que",
+    "titre1Em": "transforma",
+    "titre2": "os seus espaços",
+    "sousTitre": "Realizo pinturas vibrantes diretamente nas suas vitrines e superfícies de vidro. Cada criação é única, pensada para o seu espaço e a sua energia.",
+    "ctaGalerie": "Ver criações",
+    "ctaContact": "Contactar-me",
+    "imgAlt": "Criação CLC"
+  },
+  "About": {
+    "label": "Abordagem artística",
+    "titre": "Uma sensibilidade\nque habita\ncada traço",
+    "p1": "A minha abordagem consiste em ir ao seu encontro, absorver o seu universo e a atmosfera do seu espaço, para perceber o que o motiva.",
+    "p2": "Desta imersão nasce uma obra pensada para realçar a sua vitrine, despertar a curiosidade dos transeuntes e convidar todos a entrar, inspirando ao mesmo tempo as pessoas que vivem e trabalham neste espaço.",
+    "p3": "Pinto trabalhando com a luz: é um jogo de ausências e presenças da tinta.",
+    "p4": "No vidro, nas vitrines, em todas essas superfícies que separam e ligam.",
+    "p5": "O meu trabalho nasce de uma observação profunda e de sentimentos: os dos animais, da natureza, desta energia que chamamos vida.",
+    "p6": "Cada criação é um diálogo entre o espaço e aquele cujo olhar o atravessa.",
+    "cta": "Comunicação animal →"
+  },
+  "FeaturedImages": {
+    "ariaLabel": "Imagens em destaque",
+    "img1Alt": "Criação artística CLC",
+    "img2Alt": "Criação artística CLC",
+    "cta": "Ver todas as criações →"
+  },
+  "Services": {
+    "titre": "O que ofereço",
+    "s1Titre": "Vitrines comerciais",
+    "s1Desc": "Pintura diretamente nas suas vitrines. Lojas, restaurantes, hotéis — transformo as suas superfícies de vidro em obras vivas que atraem o olhar e contam o seu universo.",
+    "s2Titre": "Projetos personalizados",
+    "s2Desc": "Cada espaço tem uma alma. Crio composições únicas adaptadas à sua identidade, visão e local. Da conceção à realização.",
+    "s3Titre": "Instalações artísticas",
+    "s3Desc": "Para eventos, exposições e espaços efémeros. Criações marcantes, pensadas para deixar uma impressão na memória dos seus visitantes.",
+    "cta": "Vamos falar do seu projeto →"
+  },
+  "AboutPage": {
+    "label": "Sobre",
+    "titre": "O meu percurso",
+    "p1": "Sou uma artista apaixonada pela criação visual em todas as suas formas. O meu trabalho baseia-se em três eixos: pintura em vitrines, comunicação animal e criação artística pessoal.",
+    "p2": "Desde os meus primeiros projetos, tive a oportunidade de colaborar com muitos comerciantes e particulares para dar vida aos seus espaços através de vitrines únicas e personalizadas.",
+    "p3": "A comunicação animal veio enriquecer a minha prática, trazendo uma dimensão sensível e intuitiva. Permitiu-me desenvolver uma abordagem mais profunda da ligação entre o humano e o animal, que transcrio nas minhas criações.",
+    "p4": "Cada projeto é para mim uma nova aventura, uma oportunidade de contar uma história através das cores, formas e texturas."
+  },
+  "AnimalPage": {
+    "label": "Sensibilidade · Intuição",
+    "titre1": "Comunicação",
+    "titre2": "animal",
+    "intro": "Antes de ser uma prática, a comunicação animal é uma forma de estar no mundo. Uma escuta que desenvolvi desde sempre e que alimenta profundamente o meu trabalho artístico.",
+    "sousTitre": "A escuta como forma de arte",
+    "p1": "Pratico a comunicação animal há anos. Não é uma ferramenta. É uma linguagem que aprendi a ler — nos silêncios, nos gestos, nos olhares.",
+    "p2": "Esta ligação com o vivente está presente em cada obra. Guia a minha mão, orienta as minhas cores, inspira as minhas formas.",
+    "p3": "Os animais ensinam-me a presença absoluta — esta qualidade de atenção que procuro também transmitir nas minhas criações em vidro.",
+    "noteLabel": "Nota pessoal",
+    "blockquote": "\"TODO: A sua frase pessoal aqui. Um pensamento, uma anedota, uma convicção que lhe seja familiar.\"",
+    "ctaText": "Gostaria de saber mais sobre esta prática?",
+    "ctaLink": "Contactar-me →"
+  },
+  "ContactPage": {
+    "label": "Contacto",
+    "titre": "Vamos falar do seu projeto",
+    "emailLabel": "Email",
+    "emailPlaceholder": "o.seu@email.com",
+    "telLabel": "Telefone",
+    "telPlaceholder": "+351 X XX XX XX XX",
+    "instagramLabel": "Instagram",
+    "instagramPlaceholder": "@a_sua_conta",
+    "responseNote": "Geralmente respondo dentro de 24 a 48 horas. Não hesite em descrever o seu projeto em detalhe.",
+    "successTitle": "Mensagem enviada.",
+    "successBody": "Obrigado pela sua mensagem. Responderei muito em breve.",
+    "successButton": "Enviar outra mensagem",
+    "formNom": "Nome *",
+    "formNomPlaceholder": "O seu nome",
+    "formEmail": "Email *",
+    "formEmailPlaceholder": "o.seu@email.com",
+    "formSujet": "Assunto",
+    "formSujetPlaceholder": "Assunto do seu pedido",
+    "formMessage": "Mensagem *",
+    "formMessagePlaceholder": "Descreva o seu projeto, o seu espaço, os seus desejos...",
+    "submitIdle": "Enviar mensagem",
+    "submitSending": "A enviar...",
+    "errorMsg": "Ocorreu um erro. Por favor, tente novamente ou contacte-me diretamente por email."
+  },
+  "GalleryPage": {
+    "label": "Portfólio",
+    "titre": "Galeria",
+    "filterAria": "Filtrar por categoria",
+    "sectionAria": "Galeria de obras",
+    "emptyState": "Ainda não há criações nesta categoria.",
+    "scrollTopAria": "Voltar ao topo",
+    "all": "Tudo",
+    "vitrines": "Vitrines",
+    "oeuvres": "Obras pessoais",
+    "animale": "Comunicação animal",
+    "autres": "Outras criações",
+    "editionLimitee": "Edição limitada"
+  },
+  "EbookPage": {
+    "titre": "Ebook",
+    "comingSoon": "Em breve"
+  },
+  "Lightbox": {
+    "imageAria": "Imagem {current} de {total}",
+    "close": "Fechar",
+    "prev": "Imagem anterior",
+    "next": "Imagem seguinte",
+    "openAria": "Abrir {title}"
+  },
+  "Metadata": {
+    "homeTitle": "CLC — Artista | Pintura em Vitrines & Criações Artísticas",
+    "homeDesc": "A CLC realiza pinturas em vitrines, criações artísticas e instalações para comércios e espaços. Descubra o seu universo.",
+    "galerieTitle": "Galeria",
+    "galerieDesc": "Descubra as criações da CLC: pinturas em vitrines, obras pessoais, comunicação animal e outras criações artísticas.",
+    "aProposTitle": "Sobre mim",
+    "aProposDesc": "Descubra o meu percurso, a minha paixão pela pintura em vitrines e pela comunicação animal, e a história por trás da CLC.",
+    "animaleTitle": "Comunicação Animal",
+    "animaleDesc": "A comunicação animal é uma prática, uma sensibilidade e uma fonte profunda de inspiração para o meu trabalho artístico.",
+    "contactTitle": "Contacto",
+    "contactDesc": "Contacte a CLC para um projeto de pintura em vitrines, uma criação artística personalizada ou qualquer outro pedido.",
+    "ebookTitle": "Ebook",
+    "ebookDesc": "Ebook em breve",
+    "siteTitle": "CLC — Artista | Pintura em Vitrines & Criações Artísticas",
+    "siteDesc": "A CLC é uma artista especializada em pintura em vitrines, criações artísticas em superfícies de vidro e comunicação animal. Um universo de pureza, sensibilidade e sofisticação.",
+    "ogTitle": "CLC — Artista | Pintura em Vitrines",
+    "ogDesc": "Um universo artístico de pureza, sensibilidade e sofisticação.",
+    "ogAlt": "CLC — Artista pintora em vitrines",
+    "twitterTitle": "CLC — Artista | Pintura em Vitrines",
+    "twitterDesc": "Um universo artístico de pureza, sensibilidade e sofisticação."
+  }
+}

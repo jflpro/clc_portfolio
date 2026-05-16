@@ -1,0 +1,153 @@
+{
+  "Navbar": {
+    "home": "Accueil",
+    "galerie": "Galerie",
+    "ebook": "Ebook",
+    "animale": "Communication animale",
+    "aPropos": "À propos de moi",
+    "contact": "Contact",
+    "logoAria": "CLC — Retour à l'accueil",
+    "menuOpen": "Ouvrir le menu",
+    "menuClose": "Fermer le menu"
+  },
+  "Footer": {
+    "tagline": "Peinture sur vitrines · Créations artistiques",
+    "home": "Accueil",
+    "galerie": "Galerie",
+    "animale": "Communication animale",
+    "contact": "Contact",
+    "instagram": "Instagram",
+    "copyright": "© {year} CLC — Tous droits réservés",
+    "bottomTagline": "Peinture · Art · Sensibilité"
+  },
+  "Hero": {
+    "accroche": "Peinture sur vitrines · Créations artistiques",
+    "titre1": "L'art qui",
+    "titre1Em": "transforme",
+    "titre2": "vos espaces",
+    "sousTitre": "Je réalise sur vos vitrines et surfaces vitrées des peintures vibrantes. Chaque création est unique, pensée pour votre espace et votre énergie.",
+    "ctaGalerie": "Voir les créations",
+    "ctaContact": "Me contacter",
+    "imgAlt": "Création CLC"
+  },
+  "About": {
+    "label": "Démarche artistique",
+    "titre": "Une sensibilité\nqui habite\nchaque trait",
+    "p1": "Ma démarche consiste à venir à votre rencontre, à m'imprégner de votre univers et de l'atmosphère de votre lieu, afin de comprendre ce qui vous anime.",
+    "p2": "De cette immersion naît une œuvre pensée pour sublimer votre vitrine, éveiller la curiosité des passants et inviter chacun à franchir votre porte, tout en inspirant les personnes qui vivent et travaillent dans ce lieu.",
+    "p3": "Je peins en travaillant avec la lumière : c'est un jeu d'absences et de présences de la peinture.",
+    "p4": "Sur le verre, sur les vitrines, sur toutes ces surfaces qui séparent et relient.",
+    "p5": "Mon travail naît d'une observation profonde et de ressentis : ceux des animaux, de la nature, de cette énergie que l'on nomme la vie.",
+    "p6": "Chaque création est un dialogue entre l'espace et celui dont le regard la traverse.",
+    "cta": "Communication animale →"
+  },
+  "FeaturedImages": {
+    "ariaLabel": "Images à la une",
+    "img1Alt": "Création artistique CLC",
+    "img2Alt": "Création artistique CLC",
+    "cta": "Voir toutes les créations →"
+  },
+  "Services": {
+    "titre": "Ce que je propose",
+    "s1Titre": "Vitrines commerciales",
+    "s1Desc": "Peinture directement sur vos vitrines. Boutiques, restaurants, hôtels — je transforme vos surfaces vitrées en œuvres vivantes qui attirent le regard et racontent votre univers.",
+    "s2Titre": "Projets sur mesure",
+    "s2Desc": "Chaque espace a une âme. Je crée des compositions uniques adaptées à votre identité, votre vision, votre lieu. De la conception à la réalisation.",
+    "s3Titre": "Installations artistiques",
+    "s3Desc": "Pour événements, expositions et espaces éphémères. Des créations marquantes, pensées pour laisser une empreinte dans la mémoire de vos visiteurs.",
+    "cta": "Discutons de votre projet →"
+  },
+  "AboutPage": {
+    "label": "À propos",
+    "titre": "Mon parcours",
+    "p1": "Je suis une artiste passionnée par la création visuelle sous toutes ses formes. Mon travail s'articule autour de trois axes : la peinture sur vitrines, la communication animale, et la création artistique personnelle.",
+    "p2": "Depuis mes premiers projets, j'ai eu la chance de collaborer avec de nombreux commerçants et particuliers pour donner vie à leurs espaces à travers des vitrines uniques et sur mesure.",
+    "p3": "La communication animale est venue enrichir ma pratique en y apportant une dimension sensible et intuitive. Elle m'a permis de développer une approche plus profonde du lien entre l'humain et l'animal, que je retranscris dans mes créations.",
+    "p4": "Chaque projet est pour moi une nouvelle aventure, une opportunité de raconter une histoire à travers les couleurs, les formes et les textures."
+  },
+  "AnimalPage": {
+    "label": "Sensibilité · Intuition",
+    "titre1": "Communication",
+    "titre2": "animale",
+    "intro": "Avant d'être une pratique, la communication animale est une façon d'être au monde. Une écoute que j'ai développée depuis toujours, et qui nourrit profondément mon travail artistique.",
+    "sousTitre": "L'écoute comme forme d'art",
+    "p1": "Je pratique la communication animale depuis des années. Ce n'est pas un outil. C'est un langage que j'ai appris à lire — dans les silences, les gestes, les regards.",
+    "p2": "Ce lien avec le vivant est présent dans chaque œuvre. Il guide ma main, oriente mes couleurs, inspire mes formes.",
+    "p3": "Les animaux m'apprennent la présence absolue — cette qualité d'attention que je cherche aussi à transmettre dans mes créations sur verre.",
+    "noteLabel": "Note personnelle",
+    "blockquote": "\"TODO : Votre phrase personnelle ici. Une pensée, une anecdote, une conviction qui vous ressemble.\"",
+    "ctaText": "Vous souhaitez en savoir plus sur cette pratique ?",
+    "ctaLink": "Me contacter →"
+  },
+  "ContactPage": {
+    "label": "Contact",
+    "titre": "Parlons de votre projet",
+    "emailLabel": "Email",
+    "emailPlaceholder": "votre@email.com",
+    "telLabel": "Téléphone",
+    "telPlaceholder": "+33 X XX XX XX XX",
+    "instagramLabel": "Instagram",
+    "instagramPlaceholder": "@votre_compte",
+    "responseNote": "Je réponds généralement sous 24 à 48h. N'hésitez pas à me décrire votre projet en détail.",
+    "successTitle": "Message envoyé.",
+    "successBody": "Merci pour votre message. Je vous répondrai très prochainement.",
+    "successButton": "Envoyer un autre message",
+    "formNom": "Nom *",
+    "formNomPlaceholder": "Votre nom",
+    "formEmail": "Email *",
+    "formEmailPlaceholder": "votre@email.com",
+    "formSujet": "Sujet",
+    "formSujetPlaceholder": "Objet de votre demande",
+    "formMessage": "Message *",
+    "formMessagePlaceholder": "Décrivez votre projet, votre espace, vos envies...",
+    "submitIdle": "Envoyer le message",
+    "submitSending": "Envoi en cours...",
+    "errorMsg": "Une erreur s'est produite. Veuillez réessayer ou me contacter directement par email."
+  },
+  "GalleryPage": {
+    "label": "Portfolio",
+    "titre": "Galerie",
+    "filterAria": "Filtrer par catégorie",
+    "sectionAria": "Galerie d'oeuvres",
+    "emptyState": "Aucune création dans cette catégorie pour l'instant.",
+    "scrollTopAria": "Remonter en haut de page",
+    "all": "Tout",
+    "vitrines": "Vitrines",
+    "oeuvres": "Œuvres personnelles",
+    "animale": "Communication animale",
+    "autres": "Autres créations",
+    "editionLimitee": "Édition limitée"
+  },
+  "EbookPage": {
+    "titre": "Ebook",
+    "comingSoon": "Coming soon"
+  },
+  "Lightbox": {
+    "imageAria": "Image {current} sur {total}",
+    "close": "Fermer",
+    "prev": "Image précédente",
+    "next": "Image suivante",
+    "openAria": "Ouvrir {title}"
+  },
+  "Metadata": {
+    "homeTitle": "CLC — Artiste | Peinture sur Vitrines & Créations",
+    "homeDesc": "CLC réalise des peintures sur vitrines, créations artistiques et installations pour commerces et espaces. Découvrez son univers.",
+    "galerieTitle": "Galerie",
+    "galerieDesc": "Découvrez les créations de CLC : peintures sur vitrines, œuvres personnelles, communication animale et autres créations artistiques.",
+    "aProposTitle": "À propos de moi",
+    "aProposDesc": "Découvrez mon parcours, ma passion pour la peinture sur vitrines et la communication animale, et l'histoire derrière CLC.",
+    "animaleTitle": "Communication Animale",
+    "animaleDesc": "La communication animale est une pratique, une sensibilité et une source d'inspiration profonde pour mon travail artistique.",
+    "contactTitle": "Contact",
+    "contactDesc": "Contactez CLC pour un projet de peinture sur vitrines, une création artistique sur mesure ou toute autre demande.",
+    "ebookTitle": "Ebook",
+    "ebookDesc": "Ebook à venir",
+    "siteTitle": "CLC — Artiste | Peinture sur Vitrines & Créations Artistiques",
+    "siteDesc": "CLC est une artiste spécialisée en peinture sur vitrines, créations artistiques sur surfaces vitrées et communication animale. Un univers de pureté, sensibilité et sophistication.",
+    "ogTitle": "CLC — Artiste | Peinture sur Vitrines",
+    "ogDesc": "Un univers artistique de pureté, sensibilité et sophistication.",
+    "ogAlt": "CLC — Artiste peintre sur vitrines",
+    "twitterTitle": "CLC — Artiste | Peinture sur Vitrines",
+    "twitterDesc": "Un univers artistique de pureté, sensibilité et sophistication."
+  }
+}

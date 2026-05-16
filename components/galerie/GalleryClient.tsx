@@ -3,12 +3,15 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
+import { useTranslations, useLocale } from 'next-intl'
 import { galleryItems, galleryCategories, type GalleryCategory } from '@/lib/gallery-data'
 import Lightbox from './Lightbox'
 
 type FilterKey = 'all' | GalleryCategory
 
 export default function GalleryClient() {
+  const t = useTranslations('GalleryPage')
+  const locale = useLocale()
   const [activeFilter, setActiveFilter] = useState<FilterKey>('all')
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null)
 
@@ -27,17 +30,17 @@ export default function GalleryClient() {
           transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
         >
           <p className="text-xs tracking-[0.28em] uppercase text-stone-400 mb-4">
-            Portfolio
+            {t('label')}
           </p>
           <h1 className="font-serif text-5xl md:text-6xl text-charcoal">
-            Galerie
+            {t('titre')}
           </h1>
         </motion.div>
       </section>
 
       {/* Filtres */}
       <section className="px-6 md:px-12 max-w-6xl mx-auto mb-10">
-        <nav aria-label="Filtrer par catégorie">
+        <nav aria-label={t('filterAria')}>
           <ul className="flex flex-wrap gap-6 border-b border-stone-100 pb-5" role="list">
             {galleryCategories.map((cat) => (
               <li key={cat.key}>
@@ -50,7 +53,7 @@ export default function GalleryClient() {
                   }`}
                   aria-pressed={activeFilter === cat.key}
                 >
-                  {cat.label}
+                  {t(cat.key === 'edition-limitee' ? 'editionLimitee' : cat.key)}
                 </button>
               </li>
             ))}
@@ -61,7 +64,7 @@ export default function GalleryClient() {
       {/* Grille */}
       <section
         className="px-6 md:px-12 max-w-6xl mx-auto pb-20 md:pb-40"
-        aria-label="Galerie d'œuvres"
+        aria-label={t('sectionAria')}
       >
         <motion.div layout className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
           <AnimatePresence mode="popLayout">
@@ -105,7 +108,7 @@ export default function GalleryClient() {
 
         {filtered.length === 0 && (
           <p className="text-center text-stone-400 text-sm py-20 tracking-wide">
-            Aucune création dans cette catégorie pour l&apos;instant.
+            {t('emptyState')}
           </p>
         )}
       </section>
@@ -127,7 +130,7 @@ export default function GalleryClient() {
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         className="fixed z-40 w-11 h-11 flex items-center justify-center rounded-full bg-white/70 backdrop-blur-sm border border-stone-200 text-stone-400 hover:text-charcoal hover:border-stone-400 transition-all duration-300 shadow-sm"
         style={{ bottom: 'max(2rem, env(safe-area-inset-bottom))', right: 'max(2rem, env(safe-area-inset-right))' }}
-        aria-label="Remonter en haut de page"
+        aria-label={t('scrollTopAria')}
       >
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M18 15l-6-6-6 6" />

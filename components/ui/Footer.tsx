@@ -1,19 +1,27 @@
+'use client'
+
 import Link from 'next/link'
 import Image from 'next/image'
-
-const footerLinks = [
-  { href: '/home', label: 'Accueil' },
-  { href: '/galerie', label: 'Galerie' },
-  { href: '/animale', label: 'Communication animale' },
-  { href: '/contact', label: 'Contact' },
-]
+import { useParams } from 'next/navigation'
+import { allMessages, getNestedValue } from '@/lib/messages'
 
 export default function Footer() {
+  const { locale } = useParams()
+  const localeStr = (locale as string) || 'fr'
+  const msgs = allMessages[localeStr as keyof typeof allMessages] || allMessages.fr
+  const t = (key: string) => getNestedValue(msgs, key)
+
+  const footerLinks = [
+    { href: `/${localeStr}/home`, label: t('Footer.home') },
+    { href: `/${localeStr}/galerie`, label: t('Footer.galerie') },
+    { href: `/${localeStr}/animale`, label: t('Footer.animale') },
+    { href: `/${localeStr}/contact`, label: t('Footer.contact') },
+  ]
+
   return (
     <footer className="border-t border-stone-100 bg-white">
       <div className="max-w-6xl mx-auto px-6 md:px-12 py-14">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-10">
-          {/* Brand */}
           <div>
             <Image
               src="/images/intro/BCLC.png"
@@ -23,12 +31,11 @@ export default function Footer() {
               className="mb-1"
             />
             <p className="text-stone-400 text-xs font-light tracking-wide">
-              Peinture sur vitrines · Créations artistiques
+              {t('Footer.tagline')}
             </p>
           </div>
 
-          {/* Navigation */}
-          <nav aria-label="Navigation pied de page">
+          <nav aria-label={localeStr === 'fr' ? 'Navigation pied de page' : 'Footer navigation'}>
             <ul className="flex flex-wrap gap-8" role="list">
               {footerLinks.map((link) => (
                 <li key={link.href}>
@@ -43,27 +50,24 @@ export default function Footer() {
             </ul>
           </nav>
 
-          {/* Social */}
           <div>
-            {/* TODO: Remplacer par votre URL Instagram */}
             <a
               href="https://instagram.com/VOTRE_COMPTE_INSTAGRAM"
               target="_blank"
               rel="noopener noreferrer"
               className="text-xs tracking-wider uppercase text-stone-400 hover:text-charcoal transition-colors duration-300"
             >
-              Instagram
+              {t('Footer.instagram')}
             </a>
           </div>
         </div>
 
         <div className="mt-12 pt-6 border-t border-stone-50 flex flex-col sm:flex-row justify-between gap-3">
           <p className="text-stone-300 text-xs">
-            {/* TODO: Remplacer par votre nom complet si souhaité */}
-            &copy; {new Date().getFullYear()} CLC — Tous droits réservés
+            &copy; {t('Footer.copyright').replace('{year}', String(new Date().getFullYear()))}
           </p>
           <p className="text-stone-200 text-xs">
-            Peinture · Art · Sensibilité
+            {t('Footer.bottomTagline')}
           </p>
         </div>
       </div>

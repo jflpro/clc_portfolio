@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import { useTranslations } from 'next-intl'
 
 type FormStatus = 'idle' | 'sending' | 'sent' | 'error'
 
@@ -13,6 +14,7 @@ interface FormState {
 }
 
 export default function ContactContent() {
+  const t = useTranslations('ContactPage')
   const [status, setStatus] = useState<FormStatus>('idle')
   const [form, setForm] = useState<FormState>({
     name: '',
@@ -86,64 +88,58 @@ export default function ContactContent() {
             transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
           >
             <p className="text-xs tracking-[0.28em] uppercase text-stone-400 mb-6">
-              Contact
+              {t('label')}
             </p>
             <h1 className="font-serif text-5xl md:text-6xl text-charcoal leading-[1.1] mb-12">
-              Parlons de
-              <br />
-              votre projet
+              {t('titre')}
             </h1>
 
             <div className="space-y-8 text-sm font-light">
               {/* Email */}
               <div>
                 <p className="text-xs tracking-[0.2em] uppercase text-stone-400 mb-1.5">
-                  Email
+                  {t('emailLabel')}
                 </p>
-                {/* TODO: Remplacer par votre adresse email */}
                 <a
                   href="mailto:votre@email.com"
                   className="text-stone-600 hover:text-charcoal transition-colors duration-300"
                 >
-                  votre@email.com
+                  {t('emailPlaceholder')}
                 </a>
               </div>
 
               {/* Téléphone */}
               <div>
                 <p className="text-xs tracking-[0.2em] uppercase text-stone-400 mb-1.5">
-                  Téléphone
+                  {t('telLabel')}
                 </p>
-                {/* TODO: Remplacer par votre numéro de téléphone */}
                 <a
                   href="tel:+33XXXXXXXXX"
                   className="text-stone-600 hover:text-charcoal transition-colors duration-300"
                 >
-                  +33 X XX XX XX XX
+                  {t('telPlaceholder')}
                 </a>
               </div>
 
               {/* Instagram */}
               <div>
                 <p className="text-xs tracking-[0.2em] uppercase text-stone-400 mb-1.5">
-                  Instagram
+                  {t('instagramLabel')}
                 </p>
-                {/* TODO: Remplacer par votre compte Instagram */}
                 <a
                   href="https://instagram.com/VOTRE_COMPTE_INSTAGRAM"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-stone-600 hover:text-charcoal transition-colors duration-300"
                 >
-                  @votre_compte
+                  {t('instagramPlaceholder')}
                 </a>
               </div>
             </div>
 
             {/* Note de délai de réponse */}
             <p className="mt-12 text-stone-400 text-xs font-light leading-relaxed max-w-xs">
-              Je réponds généralement sous 24 à 48h. N&apos;hésitez pas à me
-              décrire votre projet en détail.
+              {t('responseNote')}
             </p>
           </motion.div>
 
@@ -161,16 +157,16 @@ export default function ContactContent() {
                 className="pt-8"
               >
                 <p className="font-serif text-3xl text-charcoal mb-4">
-                  Message envoyé.
+                  {t('successTitle')}
                 </p>
                 <p className="text-stone-500 font-light">
-                  Merci pour votre message. Je vous répondrai très prochainement.
+                  {t('successBody')}
                 </p>
                 <button
                   onClick={() => setStatus('idle')}
                   className="mt-8 text-xs tracking-[0.2em] uppercase text-stone-400 border-b border-stone-300 pb-0.5 hover:text-charcoal hover:border-charcoal transition-colors duration-300"
                 >
-                  Envoyer un autre message
+                  {t('successButton')}
                 </button>
               </motion.div>
             ) : (
@@ -185,7 +181,7 @@ export default function ContactContent() {
                     htmlFor="name"
                     className="block text-xs tracking-[0.2em] uppercase text-stone-400 mb-2.5"
                   >
-                    Nom <span aria-hidden="true">*</span>
+                    {t('formNom')}
                   </label>
                   <input
                     id="name"
@@ -195,7 +191,7 @@ export default function ContactContent() {
                     autoComplete="name"
                     value={form.name}
                     onChange={handleChange}
-                    placeholder="Votre nom"
+                    placeholder={t('formNomPlaceholder')}
                     className="w-full border-b border-stone-200 py-3 text-base text-charcoal placeholder:text-stone-300 focus:outline-none focus:border-charcoal transition-colors duration-300 bg-transparent"
                   />
                 </div>
@@ -206,7 +202,7 @@ export default function ContactContent() {
                     htmlFor="email"
                     className="block text-xs tracking-[0.2em] uppercase text-stone-400 mb-2.5"
                   >
-                    Email <span aria-hidden="true">*</span>
+                    {t('formEmail')}
                   </label>
                   <input
                     id="email"
@@ -216,7 +212,7 @@ export default function ContactContent() {
                     autoComplete="email"
                     value={form.email}
                     onChange={handleChange}
-                    placeholder="votre@email.com"
+                    placeholder={t('formEmailPlaceholder')}
                     className="w-full border-b border-stone-200 py-3 text-base text-charcoal placeholder:text-stone-300 focus:outline-none focus:border-charcoal transition-colors duration-300 bg-transparent"
                   />
                 </div>
@@ -227,7 +223,7 @@ export default function ContactContent() {
                     htmlFor="subject"
                     className="block text-xs tracking-[0.2em] uppercase text-stone-400 mb-2.5"
                   >
-                    Sujet
+                    {t('formSujet')}
                   </label>
                   <input
                     id="subject"
@@ -235,7 +231,7 @@ export default function ContactContent() {
                     type="text"
                     value={form.subject}
                     onChange={handleChange}
-                    placeholder="Objet de votre demande"
+                    placeholder={t('formSujetPlaceholder')}
                     className="w-full border-b border-stone-200 py-3 text-base text-charcoal placeholder:text-stone-300 focus:outline-none focus:border-charcoal transition-colors duration-300 bg-transparent"
                   />
                 </div>
@@ -246,7 +242,7 @@ export default function ContactContent() {
                     htmlFor="message"
                     className="block text-xs tracking-[0.2em] uppercase text-stone-400 mb-2.5"
                   >
-                    Message <span aria-hidden="true">*</span>
+                    {t('formMessage')}
                   </label>
                   <textarea
                     id="message"
@@ -255,7 +251,7 @@ export default function ContactContent() {
                     rows={6}
                     value={form.message}
                     onChange={handleChange}
-                    placeholder="Décrivez votre projet, votre espace, vos envies..."
+                    placeholder={t('formMessagePlaceholder')}
                     className="w-full border-b border-stone-200 py-3 text-sm text-charcoal placeholder:text-stone-300 focus:outline-none focus:border-charcoal transition-colors duration-300 bg-transparent resize-none"
                   />
                 </div>
@@ -266,13 +262,12 @@ export default function ContactContent() {
                   disabled={status === 'sending'}
                   className="w-full py-4 bg-charcoal text-white text-xs tracking-[0.2em] uppercase hover:bg-stone-800 transition-colors duration-300 disabled:opacity-50 disabled:cursor-wait"
                 >
-                  {status === 'sending' ? 'Envoi en cours...' : 'Envoyer le message'}
+                  {status === 'sending' ? t('submitSending') : t('submitIdle')}
                 </button>
 
                 {status === 'error' && (
                   <p className="text-center text-red-400 text-xs tracking-wide" role="alert">
-                    Une erreur s&apos;est produite. Veuillez réessayer ou me
-                    contacter directement par email.
+                    {t('errorMsg')}
                   </p>
                 )}
               </form>

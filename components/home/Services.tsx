@@ -3,32 +3,20 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import Link from 'next/link'
-
-// TODO: Personnaliser les intitulés et descriptions de services
-const services = [
-  {
-    number: '01',
-    title: 'Vitrines commerciales',
-    description:
-      'Peinture directement sur vos vitrines. Boutiques, restaurants, hôtels — je transforme vos surfaces vitrées en œuvres vivantes qui attirent le regard et racontent votre univers.',
-  },
-  {
-    number: '02',
-    title: 'Projets sur mesure',
-    description:
-      'Chaque espace a une âme. Je crée des compositions uniques adaptées à votre identité, votre vision, votre lieu. De la conception à la réalisation.',
-  },
-  {
-    number: '03',
-    title: 'Installations artistiques',
-    description:
-      'Pour événements, expositions et espaces éphémères. Des créations marquantes, pensées pour laisser une empreinte dans la mémoire de vos visiteurs.',
-  },
-]
+import { useTranslations, useLocale } from 'next-intl'
+import type { Locale } from '@/i18n'
 
 export default function Services() {
+  const t = useTranslations('Services')
+  const locale = useLocale() as Locale
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-80px' })
+
+  const services = [
+    { title: t('s1Titre'), description: t('s1Desc') },
+    { title: t('s2Titre'), description: t('s2Desc') },
+    { title: t('s3Titre'), description: t('s3Desc') },
+  ]
 
   return (
     <section
@@ -36,13 +24,14 @@ export default function Services() {
       className="py-28 md:py-40 bg-mist relative overflow-hidden"
       aria-labelledby="services-heading"
     >
+      {/* Desktop: full-section background overlay */}
       <div
-        className="absolute inset-0 bg-right bg-no-repeat"
-        style={{ backgroundImage: "url('/images/services-bg.png')", opacity: 0.2, backgroundSize: '50%' }}
+        className="hidden md:block absolute inset-0 bg-right bg-no-repeat"
+        style={{ backgroundImage: "url('/images/services-bg.png')", opacity: 0.2, backgroundSize: '43%' }}
       />
       <div
-        className="absolute inset-0 bg-right bg-no-repeat"
-        style={{ backgroundImage: "url('/images/services-bg.png')", opacity: 0.2, backgroundSize: '50%', transform: 'scaleX(-1)' }}
+        className="hidden md:block absolute inset-0 bg-right bg-no-repeat"
+        style={{ backgroundImage: "url('/images/services-bg.png')", opacity: 0.2, backgroundSize: '43%', transform: 'scaleX(-1)' }}
       />
       <div className="max-w-6xl mx-auto px-6 md:px-12 relative z-10">
         {/* En-tête */}
@@ -52,14 +41,11 @@ export default function Services() {
           transition={{ duration: 0.9, ease: [0.25, 0.1, 0.25, 1] }}
           className="mb-16 md:mb-20"
         >
-          <p className="text-xs tracking-[0.28em] uppercase text-stone-400 mb-4">
-            Services
-          </p>
           <h2
             id="services-heading"
             className="font-serif text-4xl md:text-5xl text-charcoal"
           >
-            Ce que je propose
+            {t('titre')}
           </h2>
         </motion.div>
 
@@ -67,7 +53,7 @@ export default function Services() {
         <div className="grid md:grid-cols-3 gap-12 md:gap-8 mb-16">
           {services.map((service, i) => (
             <motion.div
-              key={service.number}
+              key={i}
               initial={{ opacity: 0, y: 28 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{
@@ -76,9 +62,6 @@ export default function Services() {
                 ease: [0.25, 0.1, 0.25, 1],
               }}
             >
-              <p className="text-stone-300 text-sm font-light mb-5">
-                {service.number}
-              </p>
               <h3 className="font-serif text-xl text-charcoal mb-4">
                 {service.title}
               </h3>
@@ -89,6 +72,18 @@ export default function Services() {
           ))}
         </div>
 
+        {/* Mobile: background image inline between services and CTA */}
+        <div className="md:hidden relative h-48 mb-16">
+          <div
+            className="absolute inset-0 bg-right bg-no-repeat"
+            style={{ backgroundImage: "url('/images/services-bg.png')", opacity: 0.2, backgroundSize: '50%' }}
+          />
+          <div
+            className="absolute inset-0 bg-right bg-no-repeat"
+            style={{ backgroundImage: "url('/images/services-bg.png')", opacity: 0.2, backgroundSize: '50%', transform: 'scaleX(-1)' }}
+          />
+        </div>
+
         {/* CTA */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -96,10 +91,10 @@ export default function Services() {
           transition={{ duration: 0.8, delay: 0.6 }}
         >
           <Link
-            href="/contact"
+            href={`/${locale}/contact`}
             className="text-xs tracking-[0.2em] uppercase text-stone-400 border-b border-stone-300 pb-0.5 hover:text-charcoal hover:border-charcoal transition-colors duration-300"
           >
-            Discutons de votre projet →
+            {t('cta')}
           </Link>
         </motion.div>
       </div>

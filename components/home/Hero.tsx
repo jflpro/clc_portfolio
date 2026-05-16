@@ -2,9 +2,13 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import Image from 'next/image'
+import { useTranslations, useLocale } from 'next-intl'
+import type { Locale } from '@/i18n'
 
 export default function Hero() {
+  const t = useTranslations('Hero')
+  const locale = useLocale() as Locale
+
   return (
     <section
       className="relative min-h-[100dvh] flex items-center overflow-hidden bg-white"
@@ -21,7 +25,7 @@ export default function Hero() {
             transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
             className="text-xs tracking-[0.28em] uppercase text-stone-400 mb-8"
           >
-            Peinture sur vitrines · Créations artistiques
+            {t('accroche')}
           </motion.p>
 
           {/* Titre principal — H1 */}
@@ -31,10 +35,10 @@ export default function Hero() {
             transition={{ duration: 1.2, delay: 0.15, ease: [0.25, 0.1, 0.25, 1] }}
             className="font-serif text-5xl md:text-7xl leading-[1.08] text-charcoal mb-6 text-balance"
           >
-            L&apos;art qui{' '}
-            <em className="not-italic text-stone-400">transforme</em>
+            {t('titre1')}{' '}
+            <em className="not-italic text-stone-400">{t('titre1Em')}</em>
             <br />
-            vos espaces
+            {t('titre2')}
           </motion.h1>
 
           {/* Sous-titre */}
@@ -44,8 +48,7 @@ export default function Hero() {
             transition={{ duration: 1.2, delay: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
             className="text-base md:text-lg text-stone-500 max-w-md leading-relaxed mb-12 font-light"
           >
-            Je réalise sur vos vitrines et surfaces vitrées des peintures vibrantes.
-            Chaque création est unique, pensée pour votre espace et votre énergie.
+            {t('sousTitre')}
           </motion.p>
 
           {/* CTAs */}
@@ -56,28 +59,25 @@ export default function Hero() {
             className="flex flex-col sm:flex-row gap-4"
           >
             <Link
-              href="/galerie"
+              href={`/${locale}/galerie`}
               className="inline-flex items-center justify-center px-8 py-3.5 bg-charcoal text-white text-xs tracking-[0.15em] uppercase hover:bg-stone-800 transition-colors duration-300"
             >
-              Voir les créations
+              {t('ctaGalerie')}
             </Link>
             <Link
-              href="/contact"
+              href={`/${locale}/contact`}
               className="inline-flex items-center justify-center px-8 py-3.5 border border-charcoal text-charcoal text-xs tracking-[0.15em] uppercase hover:bg-charcoal hover:text-white transition-all duration-300"
             >
-              Me contacter
+              {t('ctaContact')}
             </Link>
           </motion.div>
         </div>
 
-        <div className="w-full">
-          <Image
-            src="/images/hero-bg.png"
-            alt="Création CLC"
-            width={720}
-            height={555}
-            className="w-full h-auto"
-            sizes="(max-width: 768px) 100vw, 50vw"
+        <div className="w-full flex items-center justify-center">
+          <img
+            src="/images/lumineux.png"
+            alt={t('imgAlt')}
+            style={{ width: 'auto', height: 'auto', transform: 'scale(1.275)' }}
           />
         </div>
       </div>

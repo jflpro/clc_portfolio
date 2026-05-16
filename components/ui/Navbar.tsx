@@ -4,20 +4,25 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
-
-const navLinks = [
-  { href: '/home', label: 'Accueil' },
-  { href: '/galerie', label: 'Galerie' },
-  { href: '/ebook', label: 'Ebook' },
-  { href: '/animale', label: 'Communication animale' },
-  { href: '/a-propos', label: 'À propos de moi' },
-  { href: '/contact', label: 'Contact' },
-]
+import { useTranslations, useLocale } from 'next-intl'
+import LanguageSwitcher from './LanguageSwitcher'
+import type { Locale } from '@/i18n'
 
 export default function Navbar() {
+  const t = useTranslations('Navbar')
+  const locale = useLocale() as Locale
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const pathname = usePathname()
+
+  const navLinks = [
+    { href: `/${locale}/home`, label: t('home') },
+    { href: `/${locale}/galerie`, label: t('galerie') },
+    { href: `/${locale}/ebook`, label: t('ebook') },
+    { href: `/${locale}/animale`, label: t('animale') },
+    { href: `/${locale}/a-propos`, label: t('aPropos') },
+    { href: `/${locale}/contact`, label: t('contact') },
+  ]
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24)
@@ -40,7 +45,7 @@ export default function Navbar() {
     >
       <nav className="w-full h-16 flex items-center">
         {/* Logo */}
-        <Link href="/home" aria-label="CLC — Retour à l'accueil">
+        <Link href={`/${locale}/home`} aria-label={t('logoAria')}>
           <Image
             src="/images/intro/BCLC.png"
             alt="CLC"
@@ -67,13 +72,16 @@ export default function Navbar() {
               </Link>
             </li>
           ))}
+          <li>
+            <LanguageSwitcher />
+          </li>
         </ul>
 
         {/* Hamburger mobile */}
         <button
           className="md:hidden flex flex-col items-center justify-center gap-[5px] w-11 h-11 ml-auto"
           onClick={() => setMenuOpen(!menuOpen)}
-          aria-label={menuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
+          aria-label={menuOpen ? t('menuClose') : t('menuOpen')}
           aria-expanded={menuOpen}
         >
           <span
@@ -116,6 +124,9 @@ export default function Navbar() {
               </Link>
             </li>
           ))}
+          <li>
+            <LanguageSwitcher />
+          </li>
         </ul>
       </div>
     </header>

@@ -3,6 +3,7 @@
 import { useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 import type { GalleryItem } from '@/lib/gallery-data'
 
 interface LightboxProps {
@@ -18,6 +19,7 @@ export default function Lightbox({
   onClose,
   onNavigate,
 }: LightboxProps) {
+  const t = useTranslations('Lightbox')
   const item = items[currentIndex]
   const hasPrev = currentIndex > 0
   const hasNext = currentIndex < items.length - 1
@@ -41,7 +43,7 @@ export default function Lightbox({
       className="fixed inset-0 z-50 flex items-center justify-center"
       role="dialog"
       aria-modal="true"
-      aria-label={`Image ${currentIndex + 1} sur ${items.length}`}
+      aria-label={t('imageAria', { current: currentIndex + 1, total: items.length })}
     >
       {/* Overlay */}
       <motion.div
@@ -107,7 +109,7 @@ export default function Lightbox({
       <button
         onClick={onClose}
          className="absolute top-5 right-5 z-20 text-stone-500 hover:text-charcoal transition-colors duration-200 text-sm tracking-widest p-4"
-        aria-label="Fermer"
+        aria-label={t('close')}
       >
         ✕
       </button>
@@ -120,7 +122,7 @@ export default function Lightbox({
             onNavigate(currentIndex - 1)
           }}
           className="absolute left-4 md:left-6 top-1/2 -translate-y-1/2 z-20 text-stone-500 hover:text-charcoal transition-colors duration-200 p-4 text-xl"
-          aria-label="Image précédente"
+          aria-label={t('prev')}
         >
           ←
         </button>
@@ -134,7 +136,7 @@ export default function Lightbox({
             onNavigate(currentIndex + 1)
           }}
           className="absolute right-4 md:right-6 top-1/2 -translate-y-1/2 z-20 text-stone-500 hover:text-charcoal transition-colors duration-200 p-4 text-xl"
-          aria-label="Image suivante"
+          aria-label={t('next')}
         >
           →
         </button>

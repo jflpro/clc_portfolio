@@ -751,6 +751,14 @@ export const galleryItems: GalleryItem[] = [
     alt: 'TODO: Description visuel communication animale 2',
     title: 'Communication 2',
   },
+  {
+    id: 'tr1',
+    category: 'animale',
+    src: '/images/gallery/animale/a2.jpg',
+    video: '/videos/gallery/pixverse-transition.mp4',
+    alt: 'Transition communication animale',
+    title: 'Transition',
+  },
 
   // --- Autres créations ---
     {
