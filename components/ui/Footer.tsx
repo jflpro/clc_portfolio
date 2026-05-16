@@ -64,7 +64,7 @@ export default function Footer() {
 
         <div className="mt-12 pt-6 border-t border-stone-50 flex flex-col sm:flex-row justify-between gap-3">
           <p className="text-stone-500 text-xs">
-            &copy; {t('Footer.copyright').replace('{year}', String(new Date().getFullYear()))}
+            {t('Footer.copyright').replace('{year}', String(new Date().getFullYear()))}
           </p>
           <p className="text-stone-400 text-xs">
             {t('Footer.bottomTagline')}
